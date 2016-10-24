@@ -1,0 +1,9 @@
+[ -n "$D" ] && OPT="-r $D" || OPT="-s"
+        update-rc.d $OPT -f atfwd_daemon remove
+        update-rc.d $OPT atfwd_daemon start 27 2 3 4 5 . stop 80 0 1 6 .
+if test "x$D" != "x"; then
+	OPT="-r $D"
+else
+	OPT="-s"
+fi
+update-rc.d $OPT atfwd-daemon start 27 2 3 4 5 . stop 80 0 1 6 .

@@ -1,0 +1,13 @@
+Package: qmi-framework
+Version: git-r3
+Description: qmi-framework version git-r3
+ QMI Framework Library
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM Proprietary
+Architecture: armv7a-vfp-neon
+OE: qmi-framework
+Homepage: unknown
+Depends: libxml0 (>= git), libconfigdb0 (>= git), diag (>= git), libc6 (>= 2.13), qmi (>= git), libdsutils1 (>= git), libglib-2.0-0 (>= 2.30.2)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/qmi-framework

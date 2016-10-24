@@ -1,0 +1,13 @@
+Package: libztelog1
+Version: git-r0
+Description: ztelog version git-r0
+ zte log Module
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: zte-Proprietary
+Architecture: armv7a-vfp-neon
+OE: ztelog
+Homepage: http://support.cdmatech.com
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_libs/libzte_log

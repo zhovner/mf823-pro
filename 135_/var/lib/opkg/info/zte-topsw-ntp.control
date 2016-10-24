@@ -1,0 +1,13 @@
+Package: zte-topsw-ntp
+Version: 1.0-r0
+Description: zte-topsw-ntp version 1.0-r0
+ zte_topsw_ntp
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: ZTE-Proprietary
+Architecture: armv7a-vfp-neon
+OE: zte-topsw-ntp
+Homepage: http://www.zte.com.cn
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), libztewan1 (>= git), libztecfg1 (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_apps/zte_topsw_ntp

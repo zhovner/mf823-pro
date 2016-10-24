@@ -1,0 +1,13 @@
+Package: libzte-fota-vd
+Version: git-r12
+Description: libzte-fota-vd version git-r12
+ ZTE APPS
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: ZTE Proprietary
+Architecture: armv7a-vfp-neon
+OE: libzte-fota-vd
+Homepage: unknown
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_libs/libzte_fota_vd

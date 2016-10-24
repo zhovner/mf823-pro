@@ -1,0 +1,13 @@
+Package: audcaltests
+Version: git-r1
+Description: audcaltests version git-r1
+ Audio Caliberation Library
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: audcaltests
+Homepage: unknown
+Depends: libacdbloader1 (>= git), libaudcal1 (>= git), libaudioalsa1 (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/mm-audio/audcal/common/test

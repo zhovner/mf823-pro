@@ -1,0 +1,1164 @@
+Package: zte-topsw-atfwd
+Version: git-r0
+Depends: qmi (>= git), libztesocket1 (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986080
+
+Package: busybox-mountall
+Version: 1.18.5-r44.0
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+Auto-Installed: yes
+
+Package: zte-nvc-apps
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+
+Package: hostap
+Version: git-r1
+Depends: qmi (>= git), libcrypto1.0.0 (>= 1.0.0f), libssl1.0.0 (>= 1.0.0f), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986080
+
+Package: system-core-adbd
+Version: git-r3
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+
+Package: busybox-syslog
+Version: 1.18.5-r44.0
+Depends: busybox
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Conffiles:
+ /etc/default/busybox-syslog a6ca0459d1639b4cad15efc04d6c2f93
+Installed-Time: 1404986078
+Auto-Installed: yes
+
+Package: libc6
+Version: 2.13-r20+svnr15508
+Provides: rtld(GNU_HASH), glibc
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: libzteled1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), libztesocket1 (>= git), diag (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+
+Package: system-core-usb
+Version: git-r3
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: zte-usb-ctl
+Version: git-r0
+Depends: qmi (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986080
+
+Package: system-core-liblog
+Version: git-r3
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13), libstdc++6 (>= 4.6.2+svnr181430)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+
+Package: busybox
+Version: 1.18.5-r44.0
+Depends: update-rc.d, busybox-mountall, libc6 (>= 2.13)
+Recommends: libgcc1, busybox-syslog
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+Auto-Installed: yes
+
+Package: libztewms1
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), libztesqlite1 (>= git), libglib-2.0-0 (>= 2.30.2), libc6 (>= 2.13), libztemc1 (>= git), diag (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: libssl1.0.0
+Version: 1.0.0f-r15.0
+Depends: libcrypto1.0.0 (>= 1.0.0f), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+Auto-Installed: yes
+
+Package: modem-shutdown
+Version: 1.0-r1
+Depends: update-rc.d
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+
+Package: alsa-intf
+Version: git-r1
+Depends: libaudioalsa1 (>= git), diag (>= git), libc6 (>= 2.13), libaudcal1 (>= git), libacdbloader1 (>= git), libacdbmapper1 (>= git), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: zte-topsw-ussd
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), qmi (>= git), qmi-framework (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: libztelan1
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), diag (>= git), libc6 (>= 2.13), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: powerapp-shutdown
+Version: git-r3
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+
+Package: zte-topsw-cfg
+Version: git-r0
+Depends: qmi (>= git), libztecfg1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986080
+
+Package: libffi5
+Version: 3.0.10-r0
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: openssl
+Version: 1.0.0f-r15.0
+Depends: libssl1.0.0 (>= 1.0.0f), libcrypto1.0.0 (>= 1.0.0f), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+
+Package: zte-topsw-nvconfig
+Version: git-r0
+Depends: libztesocket1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: libzte-fota-vd
+Version: git-r12
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+Auto-Installed: yes
+
+Package: libzteezxml1
+Version: git-r0
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: powerapp
+Version: git-r3
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: atfwd-daemon
+Version: git-r1
+Depends: update-rc.d, libztesocket1 (>= git), qmi (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user unpacked
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+
+Package: modutils-initscripts
+Version: 1.0-r6
+Depends: update-rc.d
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+Auto-Installed: yes
+
+Package: libztewan1
+Version: git-r0
+Depends: libztesocket1 (>= git), libztelog1 (>= git), diag (>= git), libglib-2.0-0 (>= 2.30.2), libztewanwrapp1 (>= git), libc6 (>= 2.13), libztemc1 (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: kernel-modules
+Version: git-9f46621b5df62dffca9c555f86edf71e189e4e55-r3
+Provides:
+Status: install user installed
+Architecture: 9615_cdp
+Installed-Time: 1404986077
+
+Package: libusb-1.0-0
+Version: 1.0.8-r2
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: libzteota1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), libztesocket1 (>= git), diag (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: libzteqmi1
+Version: git-r0
+Depends: libdsutils1 (>= git), libztelog1 (>= git), libconfigdb0 (>= git), diag (>= git), libxml0 (>= git), qmi (>= git), qmi-framework (>= git), libc6 (>= 2.13), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+Auto-Installed: yes
+
+Package: libztedatausage1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), libztesocket1 (>= git), diag (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: libztesqlite1
+Version: git-r0
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: zte-miniupnpd
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztecfg1 (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986080
+
+Package: base-files
+Version: 1.0-r3
+Provides:
+Status: install user installed
+Architecture: 9615_cdp
+Conffiles:
+ /etc/fstab 4e144bf86b6ea7eecf300e98f0b25119
+ /etc/hostname b8300c15b339a31e40b313661e862ad1
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: sysvinit-inittab
+Version: 2.88dsf-r8
+Provides:
+Status: install ok installed
+Architecture: 9615_cdp
+Conffiles:
+ /etc/inittab f4725a676ac3705eee4c8665eea8ec16
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: zte-topsw-wan
+Version: git-r0
+Depends: libgcc1 (>= 4.6.2+svnr181430), libztewan1 (>= git), libdsutils1 (>= git), libztelog1 (>= git), libztesocket1 (>= git), libztecfg1 (>= git), libztedatausage1 (>= git), libc6 (>= 2.13), libzteqmi1 (>= git), qmi (>= git), qmi-framework (>= git), libztewanwrapp1 (>= git), libztenvconfig1 (>= git), diag (>= git), libztemc1 (>= git), libzteredirect1 (>= git), data (>= git), libzteled1 (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986080
+
+Package: libstdc++6
+Version: 4.6.2+svnr181430-r22
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: sqlite
+Version: git-r0
+Depends: libztesqlite1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+
+Package: diag
+Version: git-r6
+Depends: update-rc.d, libgcc1 (>= 4.6.2+svnr181430), libglib-2.0-0 (>= 2.30.2), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: libdsutils1
+Version: git-r4
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: dnsmasq
+Version: 2.55-r2
+Depends: update-rc.d, libztenvconfig1 (>= git), libzteredirect1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Conffiles:
+ /etc/dnsmasq.conf f591c6095c99aa0a35ba303e695dc902
+Installed-Time: 1404986077
+
+Package: initscripts
+Version: 1.0-r129
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: zte-topsw-ntp
+Version: 1.0-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), libztewan1 (>= git), libztecfg1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+
+Package: zte-topsw-diag
+Version: git-r0
+Depends: libztekey1 (>= git), libztesocket1 (>= git), libzte-fota-vd (>= git), libztelog1 (>= git), libztewan1 (>= git), libztecfg1 (>= git), libztenvconfig1 (>= git), libc6 (>= 2.13), libztemc1 (>= git), diag (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986080
+
+Package: libcrypto1.0.0
+Version: 1.0.0f-r15.0
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+Auto-Installed: yes
+
+Package: libacdbloader1
+Version: git-r1
+Depends: libaudioalsa1 (>= git), diag (>= git), libc6 (>= 2.13), libaudcal1 (>= git), libacdbmapper1 (>= git), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: libacdbmapper1
+Version: git-r1
+Depends: libglib-2.0-0 (>= 2.30.2), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: update-alternatives-cworth
+Version: 1:0.1.8+svnr633-r7.0
+Provides: update-alternatives
+Conflicts: update-alternatives-dpkg
+Status: install ok installed
+Architecture: all
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: task-core-boot
+Version: 1.0-r9
+Depends: tinylogin, busybox, modutils-initscripts, initscripts, keymaps, update-alternatives-cworth, udev, sysvinit, netbase, base-files, base-passwd
+Provides:
+Status: install user installed
+Architecture: 9615_cdp
+Installed-Time: 1404986079
+
+Package: zte-topsw-ota
+Version: git-r1
+Depends: libgcc1 (>= 4.6.2+svnr181430), libztesocket1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), libzteezxml1 (>= git), libztenvconfig1 (>= git), libc6 (>= 2.13), libzteota1 (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: data
+Version: git-r8
+Depends: libgcc1 (>= 4.6.2+svnr181430), libztesocket1 (>= git), libxml0 (>= git), libztelog1 (>= git), libconfigdb0 (>= git), libdsutils1 (>= git), libc6 (>= 2.13), qmi (>= git), qmi-framework (>= git), libstdc++6 (>= 4.6.2+svnr181430), libglib-2.0-0 (>= 2.30.2), diag (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986080
+Auto-Installed: yes
+
+Package: iproute2
+Version: 3.2.0-r0
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986080
+
+Package: libzterouter1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), libztesocket1 (>= git), diag (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: libztecfg1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: libxml0
+Version: git-r7
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: libztemdm1
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), diag (>= git), libztesqlite1 (>= git), libc6 (>= 2.13), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: zte-topsw-mc-startup
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), libztedmapp1 (>= git), libztesqlite1 (>= git), libzteqmi1 (>= git), qmi-framework (>= git), libc6 (>= 2.13), libztemc1 (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+
+Package: libcutils0
+Version: git-r3
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: tcpdump
+Version: 4.1.1-r1
+Depends: libpcap (>= 1.1.1), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+
+Package: kernel-tests
+Version: git-r7
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+
+Package: gdbserver
+Version: 7.3.1-r4.0
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: libztewanwrapp1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), libztesocket1 (>= git), diag (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: libzteatfwd1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), libztesocket1 (>= git), diag (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: zte-fota-vd
+Version: git-r12
+Depends: libztenvconfig1 (>= git), libztecfg1 (>= git), libztesocket1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: udev-utils
+Version: 164-r12
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: powerapp-reboot
+Version: git-r3
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: diag-reboot-app
+Version: git-r2
+Depends: update-rc.d, diag (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+
+Package: libconfigdb0
+Version: git-r4
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libxml0 (>= git), libdsutils1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: libztesocket1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: libztedmapp1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), libztesocket1 (>= git), diag (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: qmi-shutdown-modem
+Version: git-r1
+Depends: update-rc.d, qmi-framework (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+
+Package: qmi
+Version: git-r7
+Depends: libxml0 (>= git), libconfigdb0 (>= git), update-rc.d, diag (>= git), libc6 (>= 2.13), libdsutils1 (>= git), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: libaudcal1
+Version: git-r1
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libacdbmapper1 (>= git), libaudioalsa1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: libztepbm1
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), libztesqlite1 (>= git), libc6 (>= 2.13), libglib-2.0-0 (>= 2.30.2), diag (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: csd-server
+Version: git-r1
+Depends: update-rc.d, qmi-framework (>= git), alsa-intf (>= git), libacdbloader1 (>= git), libc6 (>= 2.13), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: zte-topsw-lan
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), libzteqmi1 (>= git), libztelani1 (>= git), qmi-framework (>= git), libztemmi1 (>= git), libc6 (>= 2.13), libztemc1 (>= git), libztelan1 (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986080
+
+Package: usbutils-ids
+Version: 0.91-r3
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: libztedevui1
+Version: git-r0
+Depends: libztesocket1 (>= git), libztelog1 (>= git), diag (>= git), libztemmi1 (>= git), libc6 (>= 2.13), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: base-passwd
+Version: 3.5.22-r10
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: zte-topsw-qmi-test
+Version: git-r0
+Depends: qmi-framework (>= git), libzteqmi1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+
+Package: zte-topsw-router
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), libc6 (>= 2.13), libztemc1 (>= git), libzteredirect1 (>= git), libztelan1 (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+
+Package: libztedlna1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: zte-topsw-mc
+Version: git-r0
+Depends: libztekey1 (>= git), libztesocket1 (>= git), libzteussd1 (>= git), libztewan1 (>= git), libztecfg1 (>= git), libztedmapp1 (>= git), libztelan1 (>= git), libztewms1 (>= git), libztenvconfig1 (>= git), libztemdm1 (>= git), libzterouter1 (>= git), libztepbm1 (>= git), libc6 (>= 2.13), libztedevui1 (>= git), libztelog1 (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: zte-topsw-stk
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), qmi (>= git), qmi-framework (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986080
+
+Package: zte-topsw-syslog
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztecfg1 (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: zte-update-agent
+Version: git-r0
+Depends: libgcc1 (>= 4.6.2+svnr181430), libztenvconfig1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), libzteezxml1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+
+Package: zte-topsw-wms
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libdsutils1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), libztedatausage1 (>= git), libztesqlite1 (>= git), qmi (>= git), qmi-framework (>= git), libc6 (>= 2.13), libztemc1 (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+
+Package: libztekey1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), libztesocket1 (>= git), diag (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: audio-ftm
+Version: git-r1
+Depends: diag (>= git), alsa-intf (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: libzteredirect1
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), libglib-2.0-0 (>= 2.30.2), libc6 (>= 2.13), libztemc1 (>= git), diag (>= git)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: iptables
+Version: 1.4.12.1-r0
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13)
+Recommends: kernel-module-nf-defrag-ipv4, kernel-module-nf-conntrack, kernel-module-ipt-masquerade, kernel-module-x-tables, kernel-module-nf-nat, kernel-module-nf-conntrack-ipv4, kernel-module-iptable-nat, kernel-module-ip-tables, kernel-module-iptable-filter
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+
+Package: zte-topsw-led
+Version: git-r0
+Depends: libztesocket1 (>= git), libztecfg1 (>= git), libztelog1 (>= git), libztenvconfig1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+
+Package: udev
+Version: 164-r12
+Depends: update-rc.d, libusb-compat (>= 0.1.3), libc6 (>= 2.13)
+Recommends: udev-cache, pciutils-ids, udev-extraconf, usbutils-ids, udev-utils
+Provides: hotplug
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: libztenvconfig1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: libaudioalsa1
+Version: git-r1
+Depends: libglib-2.0-0 (>= 2.30.2), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: libpcap
+Version: 1.1.1-r1
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: powerapp-powerconfig
+Version: git-r3
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986080
+
+Package: zte-topsw-mdm
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), qmi (>= git), qmi-framework (>= git), libztemdm1 (>= git), libc6 (>= 2.13), libztemc1 (>= git), libztedevui1 (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+
+Package: cxm-apps
+Version: git-r1
+Depends: qmi-framework (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+
+Package: sysvinit-pidof
+Version: 2.88dsf-r5
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: update-rc.d
+Version: 0.7-r4
+Provides:
+Status: install ok installed
+Architecture: all
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: tinylogin
+Version: 1.4-r8
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+Auto-Installed: yes
+
+Package: time-services
+Version: git-r2
+Depends: libgcc1 (>= 4.6.2+svnr181430), qmi-framework (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: loc-api
+Version: git-r2
+Depends: libgcc1 (>= 4.6.2+svnr181430), libxml0 (>= git), libdsutils1 (>= git), libconfigdb0 (>= git), diag (>= git), libc6 (>= 2.13), qmi (>= git), qmi-framework (>= git), libstdc++6 (>= 4.6.2+svnr181430), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: pimd
+Version: git-r1
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: kbd
+Version: 1.15.2-r2
+Depends: libc6 (>= 2.13)
+Provides: console-tools
+Replaces: console-tools
+Conflicts: console-tools
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: pciutils-ids
+Version: 3.1.9-r0
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: libztelog1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: open-source-kernel-tests
+Version: git-r0
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+
+Package: zte-fota-reco
+Version: git-r12
+Depends: qmi-framework (>= git), libzte-fota-vd (>= git), libzteqmi1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+
+Package: libz1
+Version: 1.2.5-r3
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: dhcpcd
+Version: 1.3.22-pl4-r2
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: zte-conf
+Version: 1.0-r0
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+
+Package: libglib-2.0-0
+Version: 1:2.30.2-r2
+Depends: libffi5 (>= 3.0.10), libgcc1 (>= 4.6.2+svnr181430), libz1 (>= 1.2.5), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: libzteussd1
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), diag (>= git), libc6 (>= 2.13), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+
+Package: libztemmi1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), libztesocket1 (>= git), diag (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: libztelani1
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), diag (>= git), libc6 (>= 2.13), libglib-2.0-0 (>= 2.30.2), libztelan1 (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: netbase
+Version: 4.47-r0
+Depends: update-rc.d
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Conffiles:
+ /etc/hosts 27acad957c7cded40cd6ac50d23ddc66
+ /etc/network/interfaces 0e79ac68d83a8845f49afc61043c79a5
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: zte-topsw-pbm
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), libztesqlite1 (>= git), qmi (>= git), qmi-framework (>= git), libzteezxml1 (>= git), libc6 (>= 2.13), libztemc1 (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986080
+
+Package: libztemc1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), libztesocket1 (>= git), diag (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: libgcc1
+Version: 4.6.2+svnr181430-r22
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: udev-cache
+Version: 164-r12
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: keymaps
+Version: 1.0-r20
+Depends: update-rc.d, initscripts, kbd
+Provides:
+Status: install ok installed
+Architecture: 9615_cdp
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: audcaltests
+Version: git-r1
+Depends: libacdbloader1 (>= git), libaudcal1 (>= git), libaudioalsa1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+
+Package: qmi-framework
+Version: git-r3
+Depends: libxml0 (>= git), libconfigdb0 (>= git), diag (>= git), libc6 (>= 2.13), qmi (>= git), libdsutils1 (>= git), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986076
+Auto-Installed: yes
+
+Package: run-postinsts
+Version: 1.0-r7
+Depends: update-rc.d
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+
+Package: libztestk1
+Version: git-r0
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), diag (>= git), libc6 (>= 2.13), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+Auto-Installed: yes
+
+Package: zte-topsw-goahead
+Version: git-r0
+Depends: libgcc1 (>= 4.6.2+svnr181430), libztesocket1 (>= git), libztedmapp1 (>= git), libzteussd1 (>= git), libztecfg1 (>= git), libztedatausage1 (>= git), libztestk1 (>= git), libztesqlite1 (>= git), libztewms1 (>= git), libztenvconfig1 (>= git), libzteezxml1 (>= git), libztepbm1 (>= git), libc6 (>= 2.13), libztemc1 (>= git), libztelog1 (>= git), libztedlna1 (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: mbim
+Version: git-r0
+Depends: libgcc1 (>= 4.6.2+svnr181430), libztesocket1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), qmi (>= git), qmi-framework (>= git), libc6 (>= 2.13), diag (>= git)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986078
+
+Package: libusb-compat
+Version: 1:0.1.3-r2
+Depends: libusb-1.0-0 (>= 1.0.8), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: sysvinit
+Version: 2.88dsf-r5
+Depends: sysvinit-pidof, sysvinit-inittab, libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+Auto-Installed: yes
+
+Package: wireless-tools
+Version: 1:29-r2
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986080
+
+Package: zte-topsw-daemon
+Version: 1.0-r0
+Depends: libztesocket1 (>= git), libztecfg1 (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986077
+
+Package: udev-extraconf
+Version: 0.0-r2
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986079
+Auto-Installed: yes
+

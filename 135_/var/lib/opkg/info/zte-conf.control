@@ -1,0 +1,12 @@
+Package: zte-conf
+Version: 1.0-r0
+Description: zte-conf version 1.0-r0
+ ZTE conf
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: ZTE Proprietary
+Architecture: armv7a-vfp-neon
+OE: zte-conf
+Homepage: unknown
+Source: file://COPYING file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_apps/zte_conf

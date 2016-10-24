@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# DESCRIPTION: DIAG + ADB + MODEM + NMEA + QMI_RMNET + Mass Storage (Android)
+
+echo "Switching to composition number 0x9025"
+
+if [ "$1" = "y" ]; then
+	num="1"
+	mode="hsic"
+else
+	num="0"
+	mode="hsusb"
+fi
+
+#echo $mode > /sys/devices/platform/usb_bam/enable
+#echo 0 > /sys/class/android_usb/android$num/enable
+#echo 0x9025 > /sys/class/android_usb/android$num/idProduct
+#echo 0x05C6 > /sys/class/android_usb/android$num/idVendor
+#echo diag > /sys/class/android_usb/android0/f_diag/clients
+#echo smd,tty > /sys/class/android_usb/android0/f_serial/transports
+#echo SMD,BAM2BAM > /sys/class/android_usb/android0/f_rmnet/transports
+#echo diag,adb,serial,rmnet,mass_storage > /sys/class/android_usb/android$num/functions
+#echo 1 > /sys/class/android_usb/android$num/enable
+

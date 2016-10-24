@@ -1,0 +1,163 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+#mainBody {
+	width: 960px;
+}
+body{ background:#f5f5f5;}
+
+.form-body {
+    padding: 10px 0px;
+}
+
+select{border:1px solid #cacbcd;}
+/* status bar */
+#leftStatus {
+    background:#fff;
+	border-style: solid;
+	border-color: #3c9cf0;
+	border-width: 2px 0px 2px 2px;
+}
+
+#leftStatus ul li#connectStatus{
+	background-color:#DEDEDE;
+}
+#leftStatus #wifiStatus:hover{
+	background-color: #008dff;
+}
+
+#attachedDevicesNumber {
+	font-size: 20px;
+	vertical-align: top;
+	color:#2b2923;
+	font-weight:bold;
+}
+#leftStatus #statusControl .controlBtn {
+	border-bottom: 4px solid #ddd;
+}
+/*menu*/
+#nav {
+	margin-top:-12px;
+}
+#nav ul{
+    background:url(../../img/4.0img/menu_bar.png);
+	height:50px;
+    -moz-border-radius:8px;
+	-webkit-border-radius:8px;
+    border-radius: 8px;
+	width:960px;	
+	}
+ul#list-nav li a {
+    float:left; 
+	display:block; 
+	width:160px; 
+	text-align: center; 
+	font-weight:bold;
+	color:#646464;
+	line-height:50px;	
+}	
+ul#list-nav li.active a{
+	width:160px; 
+	display:inline-block; 
+	color: #fff;
+	background-position:center;
+	background: url(../../img/4.0img/menu_bg_on.jpg) repeat-x;
+}
+ul#list-nav li a:hover {
+	width:160px; 
+	display:inline-block; 
+	color: #fff;
+	background-position:center;
+	background: url(../../img/4.0img/menu_bg_on.jpg) repeat-x;
+	
+}
+/*leftmenu */
+#left{
+	background:#fff;
+	border:1px solid #e5e7e4;
+    padding-top: 5px;
+}
+#left a{
+	color: #ddd;
+	text-decoration: none;
+    padding-left: 5px;
+    height: 30px;
+    line-height: 30px;
+}
+.menu-two-level{
+	background:url(../../img/4.0img/menu_sub02_on.png) repeat-x;
+	font-weight: bold;
+	font-size: 1em;
+	margin-bottom: 10px;
+	color: #ddd;
+    height: 30px;
+    line-height: 30px;
+}
+
+#left .menu-two-level.active a{color:#fff;}
+#left .menu-three-level.active{
+    background:#ddd;
+}
+#third {
+    color:#70778a;
+}
+
+#left ul li ul li a{color: #6b6b6b; font-size:0.8em;}
+#left .menu-three-level:hover {
+	background-color: #e6e6e6; 
+}
+
+
+/*container*/
+#container{
+    border:1px solid #e5e7e4;
+    -moz-border-radius:4px;
+	-webkit-border-radius:4px;
+    border-radius: 4px;
+	background:#fff;
+}
+.form-title{ border-bottom:2px solid #3c9cf0;}
+
+
+/* Container */
+#confirm-container {
+    background:#fff 50%;
+	border:1px solid #efefef;
+ 	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+#confirm-container .header { 
+    color: #000;
+	border-bottom:2px solid #3c9cf0;
+	font-weight:bold;
+	background:#fff;
+	
+}
+#confirm-container .message {color:#000;}
+
+
+/*foot*/
+#footer{
+    border-top:2px solid #3c9cf0;
+	width:960px;
+	margin-top:50px;
+}
+#lang{margin-bottom:20px;}
+.overlay-success {
+	color: #358fe8;
+}
+
+#container.fixContainerWidth {
+    width: 960px;
+    margin-left: 0;
+}
+
+.help {
+    height: 26px;
+    width: 26px;
+    background: url(../../img/help.png) no-repeat;
+    float: right;
+    padding-right: 10px;
+}

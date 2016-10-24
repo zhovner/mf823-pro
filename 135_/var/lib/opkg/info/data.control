@@ -1,0 +1,13 @@
+Package: data
+Version: git-r8
+Description: data version git-r8
+ Qualcomm Data Modules (Excluding ConfigDB and DSUtils)
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: data
+Homepage: http://support.cdmatech.com
+Depends: libgcc1 (>= 4.6.2+svnr181430), libztesocket1 (>= git), libxml0 (>= git), libztelog1 (>= git), libconfigdb0 (>= git), libdsutils1 (>= git), libc6 (>= 2.13), qmi (>= git), qmi-framework (>= git), libstdc++6 (>= 4.6.2+svnr181430), libglib-2.0-0 (>= 2.30.2), diag (>= git)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/data file://data-init

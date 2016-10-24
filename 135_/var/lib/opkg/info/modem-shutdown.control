@@ -1,0 +1,13 @@
+Package: modem-shutdown
+Version: 1.0-r1
+Description: modem-shutdown version 1.0-r1
+ Automatically shuts the modem down on halt and reboot
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: modem-shutdown
+Homepage: unknown
+Depends: update-rc.d
+Source: file://modem-shutdown.sh

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#Copyright (c) 2012 QUALCOMM Incorporated.  All Rights Reserved.
+#QUALCOMM Proprietary and Confidential.
+
+port=rmnet0
+
+echo 'modem offline' | qmi_simple_ril_test modem_port=$port &
+sleep 1
+

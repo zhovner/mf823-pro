@@ -1,0 +1,13 @@
+Package: diag-reboot-app
+Version: git-r2
+Description: diag-reboot-app version git-r2
+ Reboot Diag
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: diag-reboot-app
+Homepage: unknown
+Depends: update-rc.d, diag (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/diag-reboot-app

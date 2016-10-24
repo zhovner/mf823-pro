@@ -1,0 +1,13 @@
+Package: libacdbmapper1
+Version: git-r1
+Description: acdbmapper version git-r1
+ acdb mapper Library
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: acdbmapper
+Homepage: unknown
+Depends: libglib-2.0-0 (>= 2.30.2), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/mm-audio/audio-acdb-util/acdb-mapper

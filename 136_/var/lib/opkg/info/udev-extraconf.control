@@ -1,0 +1,13 @@
+Package: udev-extraconf
+Version: 0.0-r2
+Description: Extra machine specific configuration files
+ Extra machine specific configuration files for udev, specifically
+ blacklist information.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2
+Architecture: armv7a-vfp-neon
+OE: udev-extraconf
+Homepage: unknown
+Source: file://mount.blacklist file://COPYING.GPL

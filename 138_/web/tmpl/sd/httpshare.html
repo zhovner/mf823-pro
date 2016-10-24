@@ -1,0 +1,136 @@
+<div id="httpshare_form">
+	<div class="form-body">
+        <!--<div class="form-title" trans="httpshare"></div>-->
+        <div>
+            <div class="form-title2" trans="httpshare" style="width: 350px;float: left;"></div>
+            <div style="display: inline-block; float: right;">
+                <button id="newFolderBtnLi" style="border: none; background: none; font-size: 12px;" class="width60" data-bind="click:openCreateNewFolderClickHandler">
+                    <div class="btn-new"></div>
+                    <span trans='add_folder'></span>
+                </button>
+            </div>
+            <div style="display: inline-block; float: right;">
+                <button id="delete_file_button" style="border: none; background: none; font-size: 12px;" class="width60"  onclick="deleteBtnClickHandler();">
+                    <div class="btn-delete_disabled"></div>
+                    <span trans='delete'></span>
+                </button>
+            </div>
+            <div class="clear"></div>
+        </div>
+		<div class="content" style="padding-left: 20px;">
+            <div class="row-fluid" style="margin-bottom: 10px;">
+                <div class="span8">
+                    <span trans="sd_path" class="width20 side-center"></span>
+					<input type="text" class="width400" value="" id="sd_path" readonly="readonly" noAction="true" class="focusIn" style="width: 360px;"/>
+                </div>
+                <div class="span4 side-right">
+                    <span style="display: block">&nbsp;</span>
+                    <span id="sd_volumn">
+                    <span id="sd_volumn_used"></span>/<span id="sd_volumn_total"></span></span>
+                </div>
+            </div>
+			<div id="fileControlSection" style="margin-bottom: 10px;">
+				<ul class="row-fluid">
+					<li id="rootBtnLi" onclick="enterFolder('');" class="cursor-pointer marginleft5">
+						<img class="sdcard_back_img" src="./img/backhome.jpg"/>
+						<span trans="root"></span>
+					</li>
+					<li id="backBtnLi" onclick="backFolder();" class="cursor-pointer marginleft5">
+						<img class="sdcard_back_img" src="./img/back.jpg"/>
+						<span trans="back"></span>
+					</li>
+					<li id="newFolderBtnLiBackup" onclick="openCreateNewFolderClickHandler();" class="cursor-pointer marginleft5" style="display: none">
+						<img class="hand_cursor_img" src="./img/new.jpg"/>
+						<span trans="new"></span>
+					</li>
+					<li id="createNewFolderLi" style="display: none;line-height: 35px; vertical-align: middle;">
+						<input type="text" name="newFolderName" id="newFolderName" maxlength="25"/>
+						<input type="button" id="createNewFolderBtn" trans="create" class="btn-1 " onclick="createNewFolderClickHandler();"/>
+						<input type="button" id="cancelCreateNewFolderBtn" trans="cancel" class="btn-1 " onclick="cancelCreateNewFolderClickHandler();"/>
+						<div id="createNewFolderErrorLabel" class="colorRed"></div>
+					</li>
+				</ul>
+			</div>
+			<div id="fileListSection">
+				<table class="fileListTable colorHoverTable">
+					<thead>
+						<tr style="background: none;">
+							<th width="40" class="sd_guest_hide_th">
+								<p id="fileList-checkAll" target="fileList_container" class="checkbox checkboxToggle">
+									<input id="checkbox-all" type="checkbox"/>
+								</p>
+							</th>
+							<th width="20"></th>
+							<th trans="sd_name" width="120" style="text-align: left;"></th>
+							<th trans="sd_rename" class="sd_guest_hide_th" width="80"></th>
+							<th trans="download" width="80"></th>
+							<th trans="sd_file_size"  width="100"></th>
+							<th trans="sd_update_time" width="140"></th>
+						</tr>
+					</thead>
+					<tbody id="fileList_container"></tbody>
+				</table>
+			</div>
+			<div id="fileListButtonSection" class="row-fluid">
+				<div class="pager floatleft" style="width: 430px;"></div>
+                <div class="side-right" style="line-height: 20px;  float: right;">
+                    <input type="button" trans="delete" id="add_delete" class="btn-1 " onclick="deleteBtnClickHandler();" style="display: none"/>
+				<input type="button" trans="back_to_login" id="go_to_login_button" class="btn-1 hide" onclick="gotoLogin();"/>
+                </div>
+			</div>
+			<div id="uploadSection">
+				<iframe id="fileUploadIframe" name="fileUploadIframe" scrolling="no" frameborder="0" width="0" height="0" style="height:0px;width:0px;"></iframe>
+				<form method="post" name="fileUploadForm" id="fileUploadForm" action="" enctype="multipart/form-data" target="fileUploadIframe">
+                    <input type="hidden" name="path_SD_CARD_time" id="path_SD_CARD_time" value=""/>
+                    <input type="hidden" name="path_SD_CARD_time_unix" id="path_SD_CARD_time_unix" value=""/>
+					<input id="fileField" name="filename" maxlength="200" type="file" dir="ltr"/>
+					<div class="fileUploadDiv">
+						<input trans="upload" id="fileUploadApplyBtn" name="fileUploadApplyBtn" type="button" class="btn-1 marginleft5 margintop5 " onclick="fileUploadSubmitClickHandler();"/>
+					</div>
+                    <div class="clear"></div>
+				</form>
+			</div>
+		</div>
+        <div class="form-note" style="background-color:#fff">
+            <div class="notes-title">&nbsp;</div>
+            <ul class="notes-content">
+                <li trans="note_upload_not_refresh"></li>
+                <li trans="note_upload_single_file_2g"></li>
+            </ul>
+        </div>
+	</div>
+</div>
+<script type="text/x-jquery-tmpl" id="sdFileItemTmpl">
+{{each(i, item) data }}
+<tr class="${trClass}">
+	{{if readwrite}}<td align="center"><p class="checkbox"><input type="checkbox" target="fileList-checkAll" value="${fileName}"/></p></td>{{/if}}
+	<td {{if fileType=='folder'}}class="cursor-pointer folderTd" filename='${fileName}'{{/if}}><span class="mini-icon ${fileType==''?'':'icon-'+fileType}"></span></td>
+	<td title="${fileName}" {{if fileType=='folder'}}class="cursor-pointer folderTd" filename='${fileName}'{{/if}} >${replaceSpaceWithNbsp(fileNameShow)}</td>
+	{{if readwrite}}<td align='center'><a href="javascript: void(0)" filename='${fileName}' class="fileRename" trans='sd_rename'></a></td>{{/if}}
+	<td align='center'>{{if fileType!='folder'}}<a href="${filePath}" filelocal="${filePath}" target="_blank" class="mini-icon icon-download"></a>{{/if}}</td>
+	<td align='center'>${fileSize}</td>
+	<td align='center'>${lastUpdateTime}</td>
+</tr>
+{{/each}}
+</script>
+<script type="text/x-jquery-tmpl" id="pagerTmpl">
+{{each(i, item) data.pagers }}
+	{{if isPrev}}
+        {{if pageNum==0}}
+	        <a href="javascript:void(0)" class="pager_disabled" trans="prev_page" onclick="javascript:void(0)"></a>
+        {{else}}
+            <a href="javascript:void(0)" trans="prev_page" onclick="pagerItemClickHandler('${pageNum}')"></a>
+        {{/if}}
+	{{else isDot}}
+	<span>...</span>
+	{{else isNext}}
+        {{if pageNum - 1==data.total}}
+            <a href="javascript:void(0)" class="pager_disabled" trans="next_page" onclick="javascript:void(0)"></a>
+        {{else}}
+            <a href="javascript:void(0)" trans="next_page" onclick="pagerItemClickHandler('${pageNum}')"></a>
+        {{/if}}
+	{{else}}
+	<a href="javascript:void(0)" class="${isActive?'pager_active':''}" onclick="pagerItemClickHandler('${pageNum}')">${pageNum}</a>
+	{{/if}}
+{{/each}}
+</script>

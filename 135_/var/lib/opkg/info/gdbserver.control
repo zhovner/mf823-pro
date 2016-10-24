@@ -1,0 +1,13 @@
+Package: gdbserver
+Version: 7.3.1-r4.0
+Description: gdb version 7.3.1-r4.0
+ gdb - GNU debugger
+Section: devel
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2 & GPLv3 & LGPLv2 & LGPLv3
+Architecture: armv7a-vfp-neon
+OE: gdb
+Homepage: http://www.gnu.org/software/gdb/
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13)
+Source: ftp://ftp.gnu.org/gnu/gdb/gdb-7.3.1.tar.gz file://no-werror.patch file://kill_arm_map_symbols.patch file://gdbserver-cflags-last.diff;striplevel=0

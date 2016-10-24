@@ -1,0 +1,49 @@
+#list-nav li.active a {
+	background: none repeat scroll 0 0 #EEB66E; 
+}
+#mainBody{
+	background-color: #EBEDF0;
+}
+#topStatus{
+	background-color: #4FA2E0;
+}
+.form-body .form-title{
+    background-color: #4FA2E0;
+}
+
+.form-body .form-note{
+    background-color: #D1E4F2;
+}
+
+#footer{
+	background-color: transparent;
+	color: #37414B ;
+}
+ul#list-nav li a {
+	text-decoration: none;
+	padding: 5px 35px;
+	background: #9CBD72;
+	color: #000000;
+	float: left;
+	text-align: center;
+	border-left: 1px solid #fff;
+}
+.tab-connection{
+    border:0px;
+}
+.tab-connection td{
+    border:0px;
+}
+.div-connection{
+    text-align: center;
+    width:200px;
+    border:1px solid white;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+#container.fixContainerWidth {
+    width: 735px;
+    margin-left: 0;
+}

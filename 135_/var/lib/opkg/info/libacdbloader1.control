@@ -1,0 +1,13 @@
+Package: libacdbloader1
+Version: git-r1
+Description: acdbloader version git-r1
+ acdb loader Library
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: acdbloader
+Homepage: unknown
+Depends: libaudioalsa1 (>= git), diag (>= git), libc6 (>= 2.13), libaudcal1 (>= git), libacdbmapper1 (>= git), libglib-2.0-0 (>= 2.30.2)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/mm-audio/audio-acdb-util/acdb-loader

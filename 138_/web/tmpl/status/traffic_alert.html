@@ -1,0 +1,66 @@
+<form id="trafficAlertForm">
+<div id="traffic_alert" class="form-body">
+	<div class="form-title" trans='traffic_alert'></div>
+	<div class="content">
+		<div class="row-fluid">
+			<label class="span4 side-right" trans="traffic_apply_volume_limit"></label>
+            <div class="span8">
+            <input type="radio" name="dataLimitEnable" id="dataLimitEnable" data-bind="checked: dataLimitChecked" value="1"/>
+                <label for="dataLimitEnable" trans="enable"></label>
+            <input type="radio" name="dataLimitEnable" id="dataLimitDisable" data-bind="checked: dataLimitChecked" value="0"/>
+                <label for="dataLimitDisable" trans="disable"></label>
+            </div>
+		</div>
+        <div class="row-fluid" data-bind='visible: dataLimitChecked() == "1"'>
+			<label class="span4 side-right" trans="traffic_data_limit_type"></label>
+            <div class="span8">
+            	<input type="radio" name="dataLimitType" id="dataLimitTypeData" data-bind="checked: dataLimitTypeChecked" value="1"/>
+                <label for="dataLimitTypeData" trans="traffic_data"></label>
+            	<input type="radio" name="dataLimitType" id="dataLimitTypeTime" data-bind="checked: dataLimitTypeChecked" value="0"/>
+                <label for="dataLimitTypeTime" trans="traffic_time"></label>
+            </div>
+		</div>
+        <div class="row-fluid" data-bind='visible: dataLimitChecked() == "1" && dataLimitTypeChecked() != "0"'>
+            <label class="span4 side-right" for='limitDataMonth' trans='traffic_limit_data_month'></label>
+            <div class="span8">
+                <input id='limitDataMonth' name="limitDataMonth" type="text" data-bind="value: limitDataMonth" class="required" minlength='1' maxlength='8'/>
+                <select name="dataUnit" id="dataUnit" data-bind="value: selectedDataUnit" class="width60">
+                	<option value="1">MB</option>
+                	<option value="1024">GB</option>
+                	<option value="1048576">TB</option>
+                </select>
+           </div>
+        </div>
+        <div class="row-fluid" data-bind='visible: dataLimitChecked() == "1" && dataLimitTypeChecked() != "0"'>
+            <label class="span4 side-right" for='alertDataReach' trans='traffic_alert_when_data_reach'></label>
+            <div class="span8">
+                <input id='alertDataReach' name="alertDataReach" type="text" data-bind="value: alertDataReach" class="required" minlength='1' maxlength='3'/>
+                <label id="traffic_data_percent" trans="traffic_percent"></label>
+           </div>
+        </div>
+        <div class="row-fluid" data-bind='visible: dataLimitChecked() == "1" && dataLimitTypeChecked() != "1"'>
+            <label class="span4 side-right" for='limitTimeMonth' trans='traffic_limit_time_month'></label>
+            <div class="span8">
+                <input id='limitTimeMonth' name="limitTimeMonth" type="text" data-bind="value: limitTimeMonth" class="required" minlength='1' maxlength='8'/>
+                <label id="hours" trans="hours"></label>
+           </div>
+        </div>
+        <div class="row-fluid" data-bind='visible: dataLimitChecked() == "1" && dataLimitTypeChecked() != "1"'>
+            <label class="span4 side-right" for='alertTimeReach' trans='traffic_alert_when_time_reach'></label>
+            <div class="span8">
+                <input id='alertTimeReach' name="alertTimeReach" type="text" data-bind="value: alertTimeReach" class="required" minlength='1' maxlength='3'/>
+                <label id="traffic_time_percent" trans="traffic_percent"></label>
+           </div>
+        </div>
+	</div>
+    <div class="form-buttons">
+        <input type="submit" class="btn-1 " trans='apply'/>
+    </div>
+    <div class="form-note">
+        <div class="notes-title">&nbsp;</div>
+        <ul class="notes-content">
+            <li trans="traffic_note"></li>
+        </ul>
+    </div>
+</div>
+</form>

@@ -1,0 +1,19 @@
+<div class="form-body">
+	<div class="form-title" trans="station_info"></div>
+	<div class="content ko-grid-container">
+        <table cellPadding="0" cellSpacing="0" id="tabStation" class="ko-grid">
+            <thead>
+                <tr>
+                    <th trans="station_number"></th>
+                    <th trans="station_info"></th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach:deviceInfo">
+                <tr data-bind="css:{odd:$index()%2==0,even:$index()%2==1}">
+                    <td data-bind="text:$index()+1"></td>
+                    <td data-bind="text:hostName"></td>
+                </tr>
+            </tbody>
+        </table>
+	</div>
+</div>

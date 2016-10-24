@@ -1,0 +1,13 @@
+Package: libzteezxml1
+Version: git-r0
+Description: zteezxml version git-r0
+ Qualcomm Data DSutils Module
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: zteezxml
+Homepage: http://support.cdmatech.com
+Depends: libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_libs/libzte_ezxml

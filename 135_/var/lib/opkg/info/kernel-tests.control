@@ -1,0 +1,13 @@
+Package: kernel-tests
+Version: git-r7
+Description: kernel-tests version git-r7
+ QUALCOMM Proprietary kernel test
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: kernel-tests
+Homepage: unknown
+Depends: libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/kernel-tests

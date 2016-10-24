@@ -1,0 +1,13 @@
+Package: libaudioalsa1
+Version: git-r1
+Description: audioalsa version git-r1
+ libaudioalsa Library
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: audioalsa
+Homepage: unknown
+Depends: libglib-2.0-0 (>= 2.30.2), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/mm-audio/audio-alsa

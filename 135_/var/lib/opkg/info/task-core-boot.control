@@ -1,0 +1,13 @@
+Package: task-core-boot
+Version: 1.0-r9
+Description: task-core-boot version 1.0-r9
+ Task for OpenedHand Poky - minimal bootable image
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: MIT
+Architecture: 9615_cdp
+OE: task-core-boot
+Homepage: unknown
+Depends: tinylogin, busybox, modutils-initscripts, initscripts, keymaps, update-alternatives-cworth, udev, sysvinit, netbase, base-files, base-passwd
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/oe-core/meta/recipes-core/tasks/task-core-boot.bb

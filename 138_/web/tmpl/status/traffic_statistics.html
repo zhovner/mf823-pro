@@ -1,0 +1,72 @@
+<div id="traffic_statistics" class="form-body">
+	<div class="form-title" trans='traffic_statistics'></div>
+    <div class="content">
+	<div id="speedTable" class="fileListTable">
+		<table>
+			<thead>
+				<tr>
+					<th></th>
+					<th trans="upload" width="35%"></th>
+					<th trans="download" width="35%"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td trans="speed"></td>
+					<td data-bind="text: up_Speed"></td>
+					<td data-bind="text: down_Speed"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="dataTable" class="fileListTable">
+		<table>
+			<thead>
+				<tr>
+					<th>&nbsp;</th>
+					<th trans="connected_time"></th>
+					<th trans="downloaded"></th>
+					<th trans="uploaded"></th>
+					<th trans="traffic_total_traffic"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td trans="traffic_current_connection"></td>
+					<td data-bind="text: currentConnectedTime"></td>
+					<td data-bind="text: currentReceived"></td>
+					<td data-bind="text: currentSent"></td>
+					<td data-bind="text: currentTraffic"></td>
+				</tr>
+				<tr>
+					<td trans="traffic_current_month_data"></td>
+					<td data-bind="text: monthlyConnectedTime"></td>
+					<td data-bind="text: monthlyReceived"></td>
+					<td data-bind="text: monthlySent"></td>
+					<td data-bind="text: monthlyTraffic"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+    </div>
+    <div class="form-note" id="traffic_info_note">
+        <ul>
+            <li data-bind="visible: limitVolumeEnable() && dataLimitTypeChecked() == '1'">
+                <span trans="traffic_used_data_month"></span>
+                <span trans="traffic_total_month" class="colorRed"></span> <span data-bind="text: dataMonthly"></span>
+                <span trans="traffic_used_month" class="colorRed"></span> <span data-bind="text: dataUsed"></span>
+                <span class="colorRed" data-bind="attr:{trans: leftMonthTrans}"></span> <span data-bind="text: dataLeft"></span>
+            </li>
+            <li data-bind="visible: limitVolumeEnable() && dataLimitTypeChecked() == '0'">
+                <span trans="traffic_used_time_month"></span>
+                <span trans="traffic_total_month" class="colorRed"></span> <span data-bind="text: timeMonthly"></span> <span trans="hours"></span>
+                <span trans="traffic_used_month" class="colorRed"></span> <span data-bind="text: timeUsed"></span>
+                <span class="colorRed" data-bind="attr:{trans: leftMonthTrans}"></span> <span data-bind="text: timeLeft"></span>
+            </li>
+            <li trans="traffic_data_approximated"></li>
+        </ul>
+    </div>
+    <div class="form-buttons">
+        <input type="button" class="btn-1 btn-primary" trans="clear" data-bind="click: clearVolume"/>
+    </div>
+</div>

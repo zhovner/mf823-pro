@@ -1,0 +1,12 @@
+[ -n "$D" ] && OPT="-r $D" || OPT="-s"
+        update-rc.d $OPT -f netmgrd remove
+        update-rc.d $OPT netmgrd start 45 2 3 4 5 . stop 80 0 1 6 .
+
+        update-rc.d $OPT -f data-init remove
+        update-rc.d $OPT data-init start 97 2 3 4 5 . stop 15 0 1 6 .
+
+        update-rc.d $OPT -f qti remove
+        update-rc.d $OPT qti start 20 2 3 4 5 . stop 20 0 1 6 .
+
+        update-rc.d $OPT -f QCMAP_ConnectionManager remove
+        update-rc.d $OPT QCMAP_ConnectionManager start 30 2 3 4 5 . stop 30 0 1 6 .

@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# DESCRIPTION:  RNDIS : ECM
+
+echo "Switching to composition number 0x9057"
+
+if [ "$1" = "y" ]; then
+	num="1"
+	mode="hsic"
+else
+	num="0"
+	mode="hsusb"
+fi
+
+echo $mode > /sys/devices/platform/usb_bam/enable
+echo 0 > /sys/class/android_usb/android$num/enable
+echo 0x9057 > /sys/class/android_usb/android$num/idProduct
+echo 0x05C6 > /sys/class/android_usb/android$num/idVendor
+echo rndis_qc:ecm_qc > /sys/class/android_usb/android$num/functions
+echo 1 > /sys/class/android_usb/android$num/remote_wakeup
+echo 1 > /sys/class/android_usb/android0/f_rndis_qc/wceis
+echo 1 > /sys/class/android_usb/android$num/enable
+

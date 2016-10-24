@@ -1,0 +1,119 @@
+#!/bin/sh
+ 
+# ---------------------------------------------------------------------------
+# Copyright (c) 2010 ZTE Incorporated.
+# All Rights Reserved. ZTE Proprietary and Confidential.
+# ---------------------------------------------------------------------------
+
+
+echo "ztemount begin"
+
+usage()
+{
+	echo "Call this script like this:"
+	echo "ztemount.sh mountall   -   mount both CD-ROM and T-CARD"
+	echo "ztemount file.sh mountcdrom   -   mount CD-ROM"
+	echo "ztemount.sh mounttcard   -   mount T-CARD"
+	echo "ztemount.sh unmounttcard   -   unmount T-CARD"
+}
+
+#if [ $# -ne 2 ]
+#then
+#	echo "zte_write_ms_file.sh Invalid argument"
+#	usage
+#	exit 1
+#fi
+
+cdromlun="/dev/zero"
+tcardlun="/dev/zero"
+
+cdromfile="/usr/zte_web/*.ISO"
+#tcardfile="/dev/mmcblk0p1"
+tcardfile="/dev/mmcblk?"
+
+ms_comp=`busybox cat /sys/class/android_usb/android0/f_mass_storage/zte_cdrom_tcard`
+ms_comp_cdrom=`busybox cat /sys/class/android_usb/android0/idProduct`
+mods=`busybox cat /sys/class/android_usb/android0/mods`
+mods_received=`busybox cat /sys/class/android_usb/android0/zte_msos_number`
+zte_a1_pid_received=`busybox cat /sys/class/android_usb/android0/zte_a1_pid`
+zte_a2_pid_received=`busybox cat /sys/class/android_usb/android0/zte_a2_pid`
+echo $ms_comp
+
+if [ "$ms_comp_cdrom" == "$zte_a2_pid_received" ]
+then
+	exit
+fi
+
+if [ "$mods" == "0" -a "$ms_comp_cdrom" == "$zte_a1_pid_received" ]
+then
+	exit
+fi
+
+if [ "$mods_received" == "8" -a "$ms_comp_cdrom" == "$zte_a1_pid_received" ]
+then
+	exit
+fi
+
+if [ "$ms_comp" == "cdromtcard" ]
+then
+	cdromlun=/sys/class/android_usb/android0/f_mass_storage/lun0/file
+	tcardlun=/sys/class/android_usb/android0/f_mass_storage/lun1/file
+fi
+
+if [ "$ms_comp" == "cdrom" ]
+then
+	cdromlun=/sys/class/android_usb/android0/f_mass_storage/lun0/file
+fi
+
+if [ "$ms_comp" == "noncdrom" ]
+then
+	cdromlun=/sys/class/android_usb/android0/f_mass_storage/lun0/file
+	cdromfile="NULL"
+fi
+
+if [ "$ms_comp" == "tcard" ]
+then
+	tcardlun=/sys/class/android_usb/android0/f_mass_storage/lun0/file
+fi
+
+if [ "$1" == "mountall" ]
+then
+     echo mountall
+	 echo $cdromfile > $cdromlun
+	 echo $tcardfile > $tcardlun
+fi
+
+echo "mountcdrom begin"
+
+if [ "$1" == "mountcdrom" ]
+then
+    echo mountcdrom
+	if [ "$ms_comp" == "tcard" ]
+	then
+		echo "tcard mountcdrom exit"
+		exit	
+	fi
+	 echo $cdromfile > $cdromlun
+fi
+
+echo "mountcdrom end"
+
+if [ "$1" == "mounttcard" ]
+then
+     echo mounttcard
+	 echo $tcardfile > $tcardlun
+fi
+
+if [ "$1" == "unmounttcard" ]
+then
+     echo unmounttcard
+	 echo   > $tcardlun
+fi
+if [ "$1" == "unmountall" ]
+then
+     echo unmount-usb-cdrom-tcard
+	   echo   > /sys/class/android_usb/android0/f_mass_storage/lun0/file
+	   echo   > /sys/class/android_usb/android0/f_mass_storage/lun1/file
+fi
+
+echo "ztemount end"

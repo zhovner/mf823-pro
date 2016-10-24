@@ -1,0 +1,25 @@
+<form id="fastbootSettingForm">
+    <div class="form-body">
+        <div class="form-title" trans="fastboot_setting"></div>
+        <div class="content">
+            <div class="row-fluid">
+                <label class="span4 side-right" trans="fastboot_setting"></label>
+                <div class="span8">
+                    <input type="radio" name="fastbootGrp" id="fastbootEnable" data-bind="checked: fastbootSetting" value="1"/>
+                    <label for="fastbootEnable" trans="enable"></label>
+                    <input type="radio" name="fastbootGrp" id="fastbootDisable" data-bind="checked: fastbootSetting" value="0"/>
+                    <label for="fastbootDisable" trans="disable"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-buttons">
+            <input type="submit" class="btn-1" trans="apply"/>
+        </div>
+        <div class="form-note">
+            <div class="notes-title">&nbsp;</div>
+            <ul class="notes-content">
+                <li trans="fastboot_note"></li>
+            </ul>
+        </div>
+    </div>
+</form>

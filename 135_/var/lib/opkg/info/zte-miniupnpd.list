@@ -1,0 +1,11 @@
+/usr/sbin/miniupnpd
+/etc/miniupnpd/iptables_flush.sh
+/etc/miniupnpd/miniupnpd_extif.sh
+/etc/miniupnpd/
+/etc/miniupnpd/iptables_init.sh
+/etc/miniupnpd/miniupnpd.sh
+/etc/miniupnpd/iptables_display.sh
+/etc/init.d/miniupnpd
+/etc/miniupnpd/miniupnpd.conf
+/etc/miniupnpd/iptables_removeall.sh
+/etc/miniupnpd/miniupnpd_listenips.sh

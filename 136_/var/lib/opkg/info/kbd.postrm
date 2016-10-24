@@ -1,0 +1,4 @@
+usrbinprogs_a="chvt deallocvt fgconsole openvt"
+  for p in $usrbinprogs_a; do
+    update-alternatives --remove $p $p.kbd
+  done

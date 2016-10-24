@@ -1,0 +1,13 @@
+Package: zte-update-agent
+Version: git-r0
+Description: zte-update-agent version git-r0
+ Qualcomm Data DSutils Module
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: zte-update-agent
+Homepage: http://support.cdmatech.com
+Depends: libgcc1 (>= 4.6.2+svnr181430), libztenvconfig1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), libzteezxml1 (>= git), libc6 (>= 2.13)
+Source: file://COPYING file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_apps/zte_update_agent

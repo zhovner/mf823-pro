@@ -1,0 +1,13 @@
+Package: csd-server
+Version: git-r1
+Description: csd-server version git-r1
+ CSD QMI Server
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: csd-server
+Homepage: unknown
+Depends: update-rc.d, qmi-framework (>= git), alsa-intf (>= git), libacdbloader1 (>= git), libc6 (>= 2.13), libglib-2.0-0 (>= 2.30.2)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/mm-audio/audio-qmi/csd-server

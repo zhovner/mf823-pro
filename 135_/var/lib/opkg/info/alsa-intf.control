@@ -1,0 +1,13 @@
+Package: alsa-intf
+Version: git-r1
+Description: alsa-intf version git-r1
+ ALSA Framework Library
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: Apache-2.0
+Architecture: armv7a-vfp-neon
+OE: alsa-intf
+Homepage: unknown
+Depends: libaudioalsa1 (>= git), diag (>= git), libc6 (>= 2.13), libaudcal1 (>= git), libacdbloader1 (>= git), libacdbmapper1 (>= git), libglib-2.0-0 (>= 2.30.2)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/qcom-opensource/mm-audio

@@ -1,0 +1,13 @@
+Package: sqlite
+Version: git-r0
+Description: sqlite version git-r0
+ Qualcomm Data DSutils Module
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: sqlite
+Homepage: http://support.cdmatech.com
+Depends: libztesqlite1 (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_apps/zte_topsw_sqlite

@@ -1,0 +1,13 @@
+Package: libaudcal1
+Version: git-r1
+Description: audcal version git-r1
+ Audio Caliberation Library
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: audcal
+Homepage: unknown
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libacdbmapper1 (>= git), libaudioalsa1 (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/mm-audio/audcal

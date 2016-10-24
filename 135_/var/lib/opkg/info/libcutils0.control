@@ -1,0 +1,13 @@
+Package: libcutils0
+Version: git-r3
+Description: system-core version git-r3
+ Android system/core components
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: Apache-2.0
+Architecture: armv7a-vfp-neon
+OE: system-core
+Homepage: http://developer.android.com/
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/system/core file://files/50-log.rules

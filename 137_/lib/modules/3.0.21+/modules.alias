@@ -1,0 +1,3 @@
+# Aliases extracted from modules themselves.
+alias spi:spidev spidev
+alias input:b*v*p*e*-e*k*r*a*m*l*s*f*w* evbug

@@ -1,0 +1,18 @@
+#!/bin/sh
+# --------------------------------------------------------------
+# Copyright (c) 2012 QUALCOMM Incorporated. All Rights Reserved.
+# QUALCOMM Proprietary and Confidential.
+# --------------------------------------------------------------
+# restart_mbimd: Simple script to restart mbimd if it crashes
+
+# Bail out if this script is already running
+if [ $(ps aux | grep restart_mbimd | wc -l) -gt 3 ]; then
+   return 0
+fi
+
+while [ 1 ]
+do
+   sleep 15
+   # This will only start mbimd if it is not running
+   start-stop-daemon -S -b -o -a /usr/bin/mbimd
+done

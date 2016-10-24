@@ -1,0 +1,2 @@
+#!/bin/sh
+update-rc.d $D qmi_shutdown_modemd remove

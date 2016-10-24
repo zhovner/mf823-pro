@@ -1,0 +1,13 @@
+Package: time-services
+Version: git-r2
+Description: time-services version git-r2
+ Time Services Daemon
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: time-services
+Homepage: unknown
+Depends: libgcc1 (>= 4.6.2+svnr181430), qmi-framework (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/time-services

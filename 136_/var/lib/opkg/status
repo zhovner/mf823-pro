@@ -1,0 +1,420 @@
+Package: busybox-mountall
+Version: 1.18.5-r44.0
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986152
+Auto-Installed: yes
+
+Package: system-core-adbd
+Version: git-r3
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+
+Package: busybox-syslog
+Version: 1.18.5-r44.0
+Depends: busybox
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Conffiles:
+ /etc/default/busybox-syslog a6ca0459d1639b4cad15efc04d6c2f93
+Installed-Time: 1404986152
+Auto-Installed: yes
+
+Package: libc6
+Version: 2.13-r20+svnr15508
+Provides: rtld(GNU_HASH), glibc
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986152
+Auto-Installed: yes
+
+Package: system-core-usb
+Version: git-r3
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986154
+
+Package: busybox
+Version: 1.18.5-r44.0
+Depends: update-rc.d, busybox-mountall, libc6 (>= 2.13)
+Recommends: libgcc1, busybox-syslog
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986152
+Auto-Installed: yes
+
+Package: powerapp-shutdown
+Version: git-r3
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+
+Package: libffi5
+Version: 3.0.10-r0
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: libzte-fota-vd
+Version: git-r12
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: powerapp
+Version: git-r3
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+
+Package: modutils-initscripts
+Version: 1.0-r6
+Depends: update-rc.d
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986152
+Auto-Installed: yes
+
+Package: libusb-1.0-0
+Version: 1.0.8-r2
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986152
+Auto-Installed: yes
+
+Package: libzteqmi1
+Version: git-r0
+Depends: libdsutils1 (>= git), libztelog1 (>= git), libconfigdb0 (>= git), diag (>= git), libxml0 (>= git), qmi (>= git), qmi-framework (>= git), libc6 (>= 2.13), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: base-files
+Version: 1.0-r3
+Provides:
+Status: install user installed
+Architecture: 9615_cdp
+Conffiles:
+ /etc/fstab 4e144bf86b6ea7eecf300e98f0b25119
+ /etc/hostname b8300c15b339a31e40b313661e862ad1
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: sysvinit-inittab
+Version: 2.88dsf-r8
+Provides:
+Status: install ok installed
+Architecture: 9615_cdp
+Conffiles:
+ /etc/inittab f4725a676ac3705eee4c8665eea8ec16
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: diag
+Version: git-r6
+Depends: update-rc.d, libgcc1 (>= 4.6.2+svnr181430), libglib-2.0-0 (>= 2.30.2), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: libdsutils1
+Version: git-r4
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: initscripts
+Version: 1.0-r129
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986152
+Auto-Installed: yes
+
+Package: update-alternatives-cworth
+Version: 1:0.1.8+svnr633-r7.0
+Provides: update-alternatives
+Conflicts: update-alternatives-dpkg
+Status: install ok installed
+Architecture: all
+Installed-Time: 1404986152
+Auto-Installed: yes
+
+Package: task-core-boot
+Version: 1.0-r9
+Depends: tinylogin, busybox, modutils-initscripts, initscripts, keymaps, update-alternatives-cworth, udev, sysvinit, netbase, base-files, base-passwd
+Provides:
+Status: install user installed
+Architecture: 9615_cdp
+Installed-Time: 1404986153
+
+Package: libzte-zcore-gui-gudi1
+Version: git-r12
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+
+Package: libxml0
+Version: git-r7
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: udev-utils
+Version: 164-r12
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: powerapp-reboot
+Version: git-r3
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+
+Package: libconfigdb0
+Version: git-r4
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libxml0 (>= git), libdsutils1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: qmi
+Version: git-r7
+Depends: libxml0 (>= git), libconfigdb0 (>= git), update-rc.d, diag (>= git), libc6 (>= 2.13), libdsutils1 (>= git), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: usbutils-ids
+Version: 0.91-r3
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: base-passwd
+Version: 3.5.22-r10
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: udev
+Version: 164-r12
+Depends: update-rc.d, libusb-compat (>= 0.1.3), libc6 (>= 2.13)
+Recommends: udev-cache, pciutils-ids, udev-extraconf, usbutils-ids, udev-utils
+Provides: hotplug
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: powerapp-powerconfig
+Version: git-r3
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986154
+
+Package: sysvinit-pidof
+Version: 2.88dsf-r5
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: update-rc.d
+Version: 0.7-r4
+Provides:
+Status: install ok installed
+Architecture: all
+Installed-Time: 1404986152
+Auto-Installed: yes
+
+Package: tinylogin
+Version: 1.4-r8
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986152
+Auto-Installed: yes
+
+Package: kbd
+Version: 1.15.2-r2
+Depends: libc6 (>= 2.13)
+Provides: console-tools
+Replaces: console-tools
+Conflicts: console-tools
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986152
+Auto-Installed: yes
+
+Package: pciutils-ids
+Version: 3.1.9-r0
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: libztelog1
+Version: git-r0
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: zte-fota-reco
+Version: git-r12
+Depends: qmi-framework (>= git), libzte-fota-vd (>= git), libzteqmi1 (>= git), libc6 (>= 2.13)
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+
+Package: libz1
+Version: 1.2.5-r3
+Depends: libgcc1 (>= 4.6.2+svnr181430), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: libglib-2.0-0
+Version: 1:2.30.2-r2
+Depends: libffi5 (>= 3.0.10), libgcc1 (>= 4.6.2+svnr181430), libz1 (>= 1.2.5), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: netbase
+Version: 4.47-r0
+Depends: update-rc.d
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Conffiles:
+ /etc/hosts 27acad957c7cded40cd6ac50d23ddc66
+ /etc/network/interfaces 0e79ac68d83a8845f49afc61043c79a5
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: libgcc1
+Version: 4.6.2+svnr181430-r22
+Depends: libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986152
+Auto-Installed: yes
+
+Package: udev-cache
+Version: 164-r12
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: keymaps
+Version: 1.0-r20
+Depends: update-rc.d, initscripts, kbd
+Provides:
+Status: install ok installed
+Architecture: 9615_cdp
+Installed-Time: 1404986152
+Auto-Installed: yes
+
+Package: qmi-framework
+Version: git-r3
+Depends: libxml0 (>= git), libconfigdb0 (>= git), diag (>= git), libc6 (>= 2.13), qmi (>= git), libdsutils1 (>= git), libglib-2.0-0 (>= 2.30.2)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: run-postinsts
+Version: 1.0-r7
+Depends: update-rc.d
+Provides:
+Status: install user installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+
+Package: libusb-compat
+Version: 1:0.1.3-r2
+Depends: libusb-1.0-0 (>= 1.0.8), libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986152
+Auto-Installed: yes
+
+Package: sysvinit
+Version: 2.88dsf-r5
+Depends: sysvinit-pidof, sysvinit-inittab, libc6 (>= 2.13)
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+
+Package: udev-extraconf
+Version: 0.0-r2
+Provides:
+Status: install ok installed
+Architecture: armv7a-vfp-neon
+Installed-Time: 1404986153
+Auto-Installed: yes
+

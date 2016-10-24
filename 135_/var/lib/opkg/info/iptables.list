@@ -1,0 +1,13 @@
+/usr/sbin/xtables-multi
+/usr/bin/iptables-xml
+/usr/sbin/iptables-save
+/usr/sbin/iptables-restore
+/usr/lib/libiptc.so.0
+/usr/lib/libip4tc.so.0
+/usr/sbin/ip6tables-save
+/usr/sbin/ip6tables
+/usr/sbin/ip6tables-restore
+/usr/lib/xtables/
+/usr/sbin/iptables
+/usr/lib/libip6tc.so.0
+/usr/lib/libxtables.so.7

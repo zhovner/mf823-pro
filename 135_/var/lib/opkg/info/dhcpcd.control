@@ -1,0 +1,16 @@
+Package: dhcpcd
+Version: 1.3.22-pl4-r2
+Description: dhcpcd version 1.3.22-pl4-r2
+ dhcpcd is an RFC2131-, RFC2132-, and RFC1541-compliant DHCP client
+ daemon. It gets an IP address and other information from the DHCP server,
+ automatically configures the network interface, and tries to renew the
+ lease time according to RFC2131 or RFC1541.
+Section: console/network
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2
+Architecture: armv7a-vfp-neon
+OE: dhcpcd
+Homepage: unknown
+Depends: libc6 (>= 2.13)
+Source: http://www.phystech.com/ftp/dhcpcd-1.3.22-pl4.tar.gz file://config_dir.patch file://paths.patch

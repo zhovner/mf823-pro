@@ -1,0 +1,13 @@
+Package: zte-nvc-apps
+Version: git-r0
+Description: zte-nvc-apps version git-r0
+ Qualcomm Data DSutils Module
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: zte-nvc-apps
+Homepage: http://support.cdmatech.com
+Depends: libztenvconfig1 (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_apps/zte_nvc_apps

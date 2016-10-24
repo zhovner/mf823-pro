@@ -1,0 +1,3 @@
+/sbin/getty
+../bin/busybox 50
+/sbin/getty.tinylogin 80

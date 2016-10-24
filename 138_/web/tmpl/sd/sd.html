@@ -1,0 +1,104 @@
+<form id="httpshare_form">
+	<div class="form-body">
+		<div class="form-title" trans="sdcard"></div>
+		<div class="content2" style="padding-left: 20px;">
+			<div class="row-fluid" id="sd_status_group" style="line-height: 25px;">
+				<label style="color: #8F8F8F; line-height: 25px;" trans="sd_card_status"></label>
+                <div class="">
+                    <label id="sd_card_status_info" class=" show label-content" data-bind="attr:{trans: sdStatusInfo}"></label>
+                </div>
+			</div>
+            <div class="row-fluid">
+            <div class="span6">
+                <div class="row-fluid" data-bind="visible: sdStatus() == 1" style="line-height: 25px;">
+                    <label  style="color: #8F8F8F; line-height: 25px;" trans="sd_card_mode"></label>
+                    <div class="">
+                        <div>
+                            <input type="radio" name="mode_set" id="mode_set_usb" data-bind="checked: selectedMode" value="1"/>
+                            <label for="mode_set_usb" trans="sd_card_share_usb_mode"></label>
+                        </div>
+                        <div>
+                        <input type="radio" name="mode_set" id="mode_set_http" data-bind="checked: selectedMode" value="0"/>
+                        <label for="mode_set_http" trans="sd_card_share_http_share_mode"></label>
+                        </div>
+                    </div>
+                </div>
+                <div data-bind="visible: selectedMode() == 0 && sdStatus() == 1">
+                    <div class="row-fluid" style="line-height: 25px;">
+                        <label style="color: #8F8F8F; line-height: 25px;" trans="sd_card_share_setting"></label>
+                        <div class="">
+                            <div>
+                                <input type="radio" name="share_enable" id="share_enable_Enable" data-bind="checked: selectedShareEnable" value="1"/>
+                                <label for="share_enable_Enable" trans="enable"></label>
+                            </div>
+                            <div>
+                                <input type="radio" name="share_enable" id="share_enable_Disable" data-bind="checked: selectedShareEnable" value="0"/>
+                                <label for="share_enable_Disable" trans="disable"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-bind="visible: selectedShareEnable() == 1">
+
+                        <div class="row-fluid" style="line-height: 25px;">
+                            <label  style="color: #8F8F8F; line-height: 25px;" trans="sd_card_access_type"></label>
+                            <div class="">
+                                <div>
+                                    <input type="radio" name="access_type" id="sd_card_read_write" data-bind="checked: selectedAccessType" value="1"/>
+                                    <label for="sd_card_read_write" trans="sd_card_read_write"></label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="access_type" id="sd_card_readonly" data-bind="checked: selectedAccessType" value="0"/>
+                                    <label for="sd_card_readonly" trans="sd_card_readonly"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="span6" data-bind="visible: selectedMode() == 0 && sdStatus() == 1">
+                    <div data-bind="visible: selectedShareEnable() == 1">
+                        <div class="row-fluid" style="line-height: 25px;">
+                            <label style="color: #8F8F8F; line-height: 25px;" trans="sd_card_file_to_share"></label>
+                            <div class="">
+                                <div>
+                                    <input type="radio" name="file_to_share" id="sd_card_entire_sd_card" data-bind="checked: selectedFileToShare, click: fileToShareClickHandle" value="1"/>
+                                    <label for="sd_card_entire_sd_card" trans="sd_card_entire_sd_card"></label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="file_to_share" id="sd_card_custom_setting" data-bind="checked: selectedFileToShare, click: fileToShareClickHandle" value="0"/>
+                                    <label for="sd_card_custom_setting" trans="sd_card_custom_setting"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="row-fluid" style="line-height: 25px;" data-bind="visible: selectedShareEnable() == 1">
+                            <label  style="color: #8F8F8F; line-height: 25px;" for="path_to_share" trans="sd_card_path_to_share"></label>
+                            <div class="">
+                                <input type="text" id="path_to_share" name="path_to_share" data-bind="value: pathToShare, disable: selectedShareEnable() == 0 || selectedFileToShare() == 1" maxlength="200" class="width250 required"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-fluid" data-bind="visible: isInvalidPath" style="line-height: 25px;">
+                        <span class=""></span>
+                        <div class=""><span  trans="sd_share_path_is_invalid"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-buttons" data-bind="visible: sdStatus() == 1">
+                <input type="submit" class="btn-1" trans="apply2" data-bind="disable: disableApplyBtn()"/>
+            </div>
+            <div class="form-note">
+                <div class="notes-title">&nbsp;</div>
+                <ul class="notes-content">
+                    <li trans="note_not_support_fs_ntfs"></li>
+                    <li trans="note_web_share_mode"></li>
+                    <li trans="note_usb_access"></li>
+                    <li trans="note_path_to_share_example"></li>
+                    <li trans="note_invalid_file_path"></li>
+                </ul>
+            </div>
+		</div>
+	</div>
+</form>

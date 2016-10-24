@@ -1,0 +1,13 @@
+Package: loc-api
+Version: git-r2
+Description: loc-api version git-r2
+ GPS Location API
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: BSD
+Architecture: armv7a-vfp-neon
+OE: loc-api
+Homepage: unknown
+Depends: libgcc1 (>= 4.6.2+svnr181430), libxml0 (>= git), libdsutils1 (>= git), libconfigdb0 (>= git), diag (>= git), libc6 (>= 2.13), qmi (>= git), qmi-framework (>= git), libstdc++6 (>= 4.6.2+svnr181430), libglib-2.0-0 (>= 2.30.2)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/hardware/qcom/gps

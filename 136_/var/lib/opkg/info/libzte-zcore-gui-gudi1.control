@@ -1,0 +1,13 @@
+Package: libzte-zcore-gui-gudi1
+Version: git-r12
+Description: zte-fota-recoveryfiles version git-r12
+ ZTE APPS
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: ZTE Proprietary
+Architecture: armv7a-vfp-neon
+OE: zte-fota-recoveryfiles
+Homepage: unknown
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libc6 (>= 2.13)
+Source: file://fstab file://libzte_zcore_gui_gudi.so.1 file://background.bmp file://rcS-zte

@@ -1,0 +1,13 @@
+Package: libdsutils1
+Version: git-r4
+Description: dsutils version git-r4
+ Qualcomm Data DSutils Module
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: dsutils
+Homepage: http://support.cdmatech.com
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/data/dsutils

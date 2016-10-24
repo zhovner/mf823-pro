@@ -1,0 +1,13 @@
+Package: zte-fota-reco
+Version: git-r12
+Description: zte-fota-reco version git-r12
+ ZTE APPS
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: ZTE Proprietary
+Architecture: armv7a-vfp-neon
+OE: zte-fota-reco
+Homepage: unknown
+Depends: qmi-framework (>= git), libzte-fota-vd (>= git), libzteqmi1 (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_apps/zte_fota_reco

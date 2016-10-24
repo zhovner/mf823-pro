@@ -1,0 +1,13 @@
+Package: hostap
+Version: git-r1
+Description: hostap version git-r1
+ Hostap
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: BSD
+Architecture: armv7a-vfp-neon
+OE: hostap
+Homepage: unknown
+Depends: qmi (>= git), libcrypto1.0.0 (>= 1.0.0f), libssl1.0.0 (>= 1.0.0f), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/external/hostap

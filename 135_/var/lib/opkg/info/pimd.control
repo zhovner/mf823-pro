@@ -1,0 +1,13 @@
+Package: pimd
+Version: git-r1
+Description: pimd version git-r1
+ PIMD - Multicast Routing Daemon
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: BSD
+Architecture: armv7a-vfp-neon
+OE: pimd
+Homepage: unknown
+Depends: libc6 (>= 2.13)
+Source: git://github.com/troglobit/pimd.git;protocol=git file://0001-pimb-multicast-support-on-network.patch

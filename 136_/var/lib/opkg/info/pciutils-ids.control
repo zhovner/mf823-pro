@@ -1,0 +1,12 @@
+Package: pciutils-ids
+Version: 3.1.9-r0
+Description: PCI Utilities
+ The list of PCI IDs for pciutils
+Section: console/utils
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2+
+Architecture: armv7a-vfp-neon
+OE: pciutils
+Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+Source: http://kernel.org/pub/software/utils/pciutils/pciutils-3.1.9.tar.bz2 file://configure.patch file://pcimodules-pciutils.diff file://lib-build-fix.patch file://guess-fix.patch file://makefile.patch

@@ -1,0 +1,13 @@
+Package: atfwd-daemon
+Version: git-r1
+Description: atfwd-daemon version git-r1
+ Daemon to handle AT commands
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: atfwd-daemon
+Homepage: unknown
+Depends: update-rc.d, libztesocket1 (>= git), qmi (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/atfwd-daemon

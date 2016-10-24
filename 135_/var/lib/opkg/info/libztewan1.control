@@ -1,0 +1,13 @@
+Package: libztewan1
+Version: git-r0
+Description: ztewan version git-r0
+ zte ipc socket Module
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: zte-Proprietary
+Architecture: armv7a-vfp-neon
+OE: ztewan
+Homepage: http://www.zte.com.cn
+Depends: libztesocket1 (>= git), libztelog1 (>= git), diag (>= git), libglib-2.0-0 (>= 2.30.2), libztewanwrapp1 (>= git), libc6 (>= 2.13), libztemc1 (>= git)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_libs/libzte_wan

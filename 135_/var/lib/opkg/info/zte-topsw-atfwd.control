@@ -1,0 +1,13 @@
+Package: zte-topsw-atfwd
+Version: git-r0
+Description: zte-topsw-atfwd version git-r0
+ Qualcomm Data DSutils Module
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: zte-topsw-atfwd
+Homepage: http://support.cdmatech.com
+Depends: qmi (>= git), libztesocket1 (>= git), libztelog1 (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_apps/zte_topsw_atfwd

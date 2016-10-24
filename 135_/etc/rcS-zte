@@ -1,0 +1,130 @@
+#!/bin/sh
+
+#reboot instead of turn to download mode when kernel panic
+if [ x`cat /sys/class/android_usb/android0/download` = x"NORMAL" ]; then
+    echo "default process for crash: reboot"
+    echo 1 > /proc/sys/kernel/panic
+    echo 0 > /sys/module/restart/parameters/download_mode
+else
+    echo "default process for crash: download"
+fi
+
+if [ -e /dev/mmcblk0p1 ]; then
+  mount /dev/mmcblk0p1 /media/card
+  if [ -f /media/card/MF823/myautorun.sh ]; then
+    /media/card/MF823/myautorun.sh
+    exit
+  fi
+fi
+
+mbim_flag=`cat /sys/class/android_usb/android0/win8mbim`
+cpe_flag=`cat /sys/class/android_usb/android0/cpe_mode`
+
+if [ x$cpe_flag = x"1" ]; then
+   mbim_flag=1
+fi  
+
+if [ x$mbim_flag = x"1" -o x$mbim_flag = x"2" ]; then
+    echo "win8"
+    echo 1 > /sys/class/android_usb/android0/rcs_run_state 
+	rm -f /var/run/qbi_session_active
+    start-stop-daemon -S -b -a /usr/bin/mbimd
+    start-stop-daemon -S -b -N 5 -o -x /usr/sbin/restart_mbimd
+    echo "start cfg with para mbim."
+if [ x$mbim_flag = x"1" ]
+then
+    zte_topsw_cfg mbim &
+else
+	  zte_topsw_cfg &
+fi
+    zte_httpshare_control 2 &
+    zte_usb_ctl &
+    #protect the adbd daemon,if daemon is not running,run it###
+	ifconfig lo up
+    start-stop-daemon -S -b -a /sbin/adbd
+    zte_fota_vd &
+    zte_topsw_ota &
+    set_passwd()
+   {
+	echo "root:zte9x15" > /tmp/tmppw
+	chpasswd < /tmp/tmppw
+	rm -rf /tmp/tmppw
+   }
+    set_passwd
+	exit
+else
+    echo 2 > /sys/class/android_usb/android0/rcs_run_state 
+    echo "not win8"
+fi
+
+date -s "2012-04-01 00:00:00"
+zte_fota
+
+#################### Factory Restore Function Begin ######################
+factory_restore()
+{
+	echo "start restore configs." >> /tmp/restore.log
+	#restore nvconfig
+	rm /usr/zte/zte_conf/config/userseting_nvconfig.txt || echo "can not remove userseting_nvconfig.txt" >> /tmp/restore.log
+	#restore dnsmasq
+	rm /usr/zte/zte_conf/config/dnsmasq.conf || echo "can not remove /usr/zte/zte_conf/config/dnsmasq.conf" >> /tmp/restore.log
+	cp /usr/zte_web/web/copy/etc/dnsmasq.conf /usr/zte/zte_conf/config/dnsmasq.conf || echo "can not copy /usr/zte_web/web/copy/etc/dnsmasq.conf" >> /tmp/restore.log
+	#restore xxx
+	rm /etc/factory_restore || echo "fatal error: can not remove flag /etc/factory_restore" >> /tmp/restore.log
+	echo "restore configs finished." >> /tmp/restore.log
+}
+
+factory_restore_probe()
+{
+	if [ -f /etc/factory_restore ]; then
+		echo "need restore configs..." >> /tmp/restore.log
+		factory_restore
+	else
+	    echo "no need restore configs." >> /tmp/restore.log
+	fi
+}
+
+userdata_restore_probe()
+{
+	#check if restore ztedata
+	if [ -f /etc/userdata_restore_flag ]; then
+		rm /etc/userdata_restore_flag || echo "fatal error: can not remove /etc/userdata_restore_flag" >> /tmp/restore.log
+		echo "need restore userdata..." >> /tmp/restore.log
+		######## restore sms and phonebook here ########
+		rm /usr/zte/web/sms_db/sms.db || echo "can not remove /usr/zte/web/sms_db/sms.db" >> /tmp/restore.log
+		rm /usr/zte/web/pbm_db/pbm.db || echo "can not remove /usr/zte/web/pbm_db/pbm.db" >> /tmp/restore.log
+		######## restore userdata here ########
+		echo "restore userdata finished." >> /tmp/restore.log
+	else
+		echo "no need restore userdata." >> /tmp/restore.log
+	fi
+}
+### this must be the first to run ###
+echo "checking for restore..." > /tmp/restore.log
+echo "start time: `date`" >> /tmp/restore.log
+userdata_restore_probe
+factory_restore_probe
+echo "end time  : `date`" >> /tmp/restore.log
+
+#################### Factory Restore Function End ######################
+set_passwd()
+{
+	echo "root:zte9x15" > /tmp/tmppw
+	chpasswd < /tmp/tmppw
+	rm -rf /tmp/tmppw
+}
+set_passwd
+#start up telnetd for debug use
+telnetd
+#################### Add zte programs below ####################
+ifconfig lo up
+zte_usb_ctl &
+
+#cfg will start zte_topsw_daemon
+zte_topsw_cfg &
+
+#cfg will start zte_topsw_ota
+zte_fota_vd &
+zte_topsw_ota &
+#protect the adbd daemon,if daemon is not running,run it###
+start-stop-daemon -S -b -a /sbin/adbd

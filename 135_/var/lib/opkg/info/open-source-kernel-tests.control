@@ -1,0 +1,12 @@
+Package: open-source-kernel-tests
+Version: git-r0
+Description: open-source-kernel-tests version git-r0
+ Open Source kernel tests
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: BSD
+Architecture: armv7a-vfp-neon
+OE: open-source-kernel-tests
+Homepage: unknown
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/qcom-opensource/kernel/kernel-tests

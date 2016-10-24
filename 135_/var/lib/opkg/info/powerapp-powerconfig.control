@@ -1,0 +1,12 @@
+Package: powerapp-powerconfig
+Version: git-r3
+Description: powerapp version git-r3
+ Powerapp tools
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: Apache-2.0
+Architecture: armv7a-vfp-neon
+OE: powerapp
+Homepage: http://codeaurora.org/
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/system/core/powerapp

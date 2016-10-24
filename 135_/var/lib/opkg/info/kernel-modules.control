@@ -1,0 +1,12 @@
+Package: kernel-modules
+Version: git-9f46621b5df62dffca9c555f86edf71e189e4e55-r3
+Description: linux-quic version git-9f46621b5df62dffca9c555f86edf71e189e4e55-r3
+ QuIC Linux Kernel
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2
+Architecture: 9615_cdp
+OE: linux-quic
+Homepage: unknown
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/oe-core/meta-msm/recipes/linux-quic/linux-quic_git.bb

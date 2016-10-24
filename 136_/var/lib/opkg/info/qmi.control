@@ -1,0 +1,13 @@
+Package: qmi
+Version: git-r7
+Description: qmi version git-r7
+ Qualcomm MSM Interface (QMI) Library
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: qmi
+Homepage: http://support.cdmatech.com
+Depends: libxml0 (>= git), libconfigdb0 (>= git), update-rc.d, diag (>= git), libc6 (>= 2.13), libdsutils1 (>= git), libglib-2.0-0 (>= 2.30.2)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/qmi

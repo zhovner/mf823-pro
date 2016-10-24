@@ -1,0 +1,12 @@
+Package: base-files
+Version: 1.0-r3
+Description: base-files version 1.0-r3
+ Miscellaneous files for the base system.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2
+Architecture: 9615_cdp
+OE: base-files
+Homepage: unknown
+Source: file://nsswitch.conf file://motd file://inputrc file://host.conf file://profile file://profile.d file://9615-cdp/fstab file://filesystems file://issue.net file://issue file://usbd file://share/dot.bashrc file://share/dot.profile file://ls file://set-console

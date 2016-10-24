@@ -1,0 +1,13 @@
+Package: zte-topsw-qmi-test
+Version: git-r0
+Description: zte-topsw-qmi-test version git-r0
+ Qualcomm Data DSutils Module
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: zte-topsw-qmi-test
+Homepage: http://support.cdmatech.com
+Depends: qmi-framework (>= git), libzteqmi1 (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_apps/zte_topsw_qmi_test

@@ -1,0 +1,28 @@
+#!/bin/sh
+#start all other single control processes
+zte_topsw_lan &
+zte_netlink_ctl&
+zte_topsw_wms &
+zte_topsw_pbm &
+zte_topsw_ussd &
+zte_topsw_diag &
+zte_topsw_mmi &
+zte_topsw_devui &
+zte_topsw_key &
+zte_topsw_led &
+zte_topsw_dmapp &
+zte_topsw_wispr &
+zte_update_agent &
+zte_topsw_dlna &
+zte_topsw_temp_protect &
+
+#addedb by shenqingchao for syslog 20120921 begin
+zte_topsw_syslog &
+#addedb by shenqingchao for syslog 20120921 end
+#move zte_dm to fota vd by lucuiling 20131126
+#zte_dm & 
+#added liwei 2013-12-24 zte_topsw_atfwd start
+zte_topsw_atfwd &
+#added liwei 2013-12-24 zte_topsw_atfwd end
+
+echo "" > /var/log/wtmp

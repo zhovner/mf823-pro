@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# DESCRIPTION: RNDIS : ECM : MBIM
+
+echo "Switching to composition number 0x9063"
+
+if [ "$1" = "y" ]; then
+	num="1"
+	mode="hsic"
+else
+	num="0"
+	mode="hsusb"
+fi
+
+echo $mode > /sys/devices/platform/usb_bam/enable
+echo 0 > /sys/class/android_usb/android$num/enable
+echo 0x9063 > /sys/class/android_usb/android$num/idProduct
+echo 0x05C6 > /sys/class/android_usb/android$num/idVendor
+echo 239 > /sys/class/android_usb/android$num/bDeviceClass
+echo 2 > /sys/class/android_usb/android$num/bDeviceSubClass
+echo 1 > /sys/class/android_usb/android$num/bDeviceProtocol
+echo rndis_qc:ecm_qc:usb_mbim > /sys/class/android_usb/android$num/functions
+echo 1 > /sys/class/android_usb/android$num/remote_wakeup
+echo 1 > /sys/class/android_usb/android0/f_rndis_qc/wceis
+echo 1 > /sys/class/android_usb/android$num/enable
+

@@ -1,0 +1,16 @@
+Package: udev
+Version: 164-r12
+Description: /dev/ and hotplug management daemon
+ udev is a daemon which dynamically creates and removes device nodes from
+ /dev/, handles hotplug events and loads drivers at boot time.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2.0+
+Architecture: armv7a-vfp-neon
+OE: udev
+Homepage: http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
+Depends: update-rc.d, libusb-compat (>= 0.1.3), libc6 (>= 2.13)
+Recommends: udev-cache, pciutils-ids, udev-extraconf, usbutils-ids, udev-utils
+Provides: hotplug
+Source: http://kernel.org/pub/linux/utils/kernel/hotplug/udev-164.tar.gz file://run.rules file://udev.rules file://devfs-udev.rules file://links.conf file://permissions.rules file://mount.sh file://network.sh file://local.rules file://udev-cache file://init file://udev-166-v4l1-1.patch file://do-not-install-unnecessary-udev-rules.patch

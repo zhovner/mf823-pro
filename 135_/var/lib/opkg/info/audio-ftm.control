@@ -1,0 +1,13 @@
+Package: audio-ftm
+Version: git-r1
+Description: audio-ftm version git-r1
+ Audio FTM
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: audio-ftm
+Homepage: unknown
+Depends: diag (>= git), alsa-intf (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/mm-audio/audio_ftm

@@ -1,0 +1,6 @@
+usrbinprogs_a="chvt deallocvt fgconsole openvt"
+  for p in $usrbinprogs_a; do
+    if [ -f "$D/usr/bin/$p" ]; then
+      update-alternatives --install /usr/bin/$p $p $p.kbd 100
+    fi
+  done

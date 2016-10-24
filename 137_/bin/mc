@@ -1,0 +1,6 @@
+#!/bin/sh
+export TMPDIR=/dev/shm
+export TERM=xterm
+export TERMINFO=/system/etc/terminfo
+/usr/bin/mcmain $*
+

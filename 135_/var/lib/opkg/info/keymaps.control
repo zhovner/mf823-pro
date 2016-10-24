@@ -1,0 +1,13 @@
+Package: keymaps
+Version: 1.0-r20
+Description: Keyboard maps
+ Keymaps and initscript to set the keymap on bootup.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2
+Architecture: 9615_cdp
+OE: keymaps
+Homepage: unknown
+Depends: update-rc.d, initscripts, kbd
+Source: file://keymap.sh file://GPLv2.patch

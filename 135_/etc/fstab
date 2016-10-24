@@ -1,0 +1,12 @@
+rootfs               /                    auto       defaults              1  1
+proc                 /proc                proc       defaults              0  0
+devpts               /dev/pts             devpts     mode=0620,gid=5       0  0
+#modified by quanjia begin
+#usbfs                /proc/bus/usb       usbfs      defaults              0  0
+tmpfs                /dev/shm             tmpfs      mode=0777             0  0
+/dev/mtdblock19      /usr                 yaffs2     defaults              0  0
+#/dev/mmcblk0p1       /media/card         auto       defaults,gid=1015,umask=002     0  0
+/dev/mtdblock11       /cache              yaffs2     defaults              0  0
+/dev/mtdblock16      /usr/zte_web         yaffs2     defaults              0  0
+tmpfs                /var/volatile        tmpfs      defaults              0  0
+#modified by quanjia end

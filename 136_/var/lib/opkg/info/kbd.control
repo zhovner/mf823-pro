@@ -1,0 +1,16 @@
+Package: kbd
+Version: 1.15.2-r2
+Description: kbd version 1.15.2-r2
+ This package contains keytable files and keyboard utilities
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2+
+Architecture: armv7a-vfp-neon
+OE: kbd
+Homepage: unknown
+Depends: libc6 (>= 2.13)
+Provides: console-tools
+Replaces: console-tools
+Conflicts: console-tools
+Source: http://kernel.org/pub/linux/utils/kbd/kbd-1.15.2.tar.bz2

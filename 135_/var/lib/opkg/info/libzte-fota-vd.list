@@ -1,0 +1,4 @@
+/usr/lib/libzte_fota_vd.so.1
+/usr/bin/adbd_pc
+/etc/umountdisk.sh
+/etc/mountdisk.sh

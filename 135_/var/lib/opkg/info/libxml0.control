@@ -1,0 +1,13 @@
+Package: libxml0
+Version: git-r7
+Description: xmllib version git-r7
+ Qualcomm XML Library
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: xmllib
+Homepage: http://support.cdmatech.com
+Depends: libglib-2.0-0 (>= 2.30.2), diag (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/xmllib

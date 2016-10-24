@@ -1,0 +1,13 @@
+Package: zte-topsw-wan
+Version: git-r0
+Description: zte-topsw-wan version git-r0
+ Qualcomm Data DSutils Module
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: zte-topsw-wan
+Homepage: http://support.cdmatech.com
+Depends: libgcc1 (>= 4.6.2+svnr181430), libztewan1 (>= git), libdsutils1 (>= git), libztelog1 (>= git), libztesocket1 (>= git), libztecfg1 (>= git), libztedatausage1 (>= git), libc6 (>= 2.13), libzteqmi1 (>= git), qmi (>= git), qmi-framework (>= git), libztewanwrapp1 (>= git), libztenvconfig1 (>= git), diag (>= git), libztemc1 (>= git), libzteredirect1 (>= git), data (>= git), libzteled1 (>= git)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_apps/zte_topsw_wan

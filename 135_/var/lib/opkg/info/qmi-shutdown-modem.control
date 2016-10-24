@@ -1,0 +1,13 @@
+Package: qmi-shutdown-modem
+Version: git-r1
+Description: qmi-shutdown-modem version git-r1
+ QMI shutdown modem Daemon
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: qmi-shutdown-modem
+Homepage: unknown
+Depends: update-rc.d, qmi-framework (>= git), libc6 (>= 2.13)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/qmi-shutdown-modem

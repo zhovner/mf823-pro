@@ -1,0 +1,80 @@
+﻿<div class="form-body">
+	<div class="form-title" trans='stk_info'></div>
+	<div class="content">
+		<div class="note paddingleft15" trans="version_stk_no_info" data-bind="visible: STKInfo()==0"></div>
+		<div class="note paddingleft15" trans="simcard_stk_no_info" data-bind="visible: STKInfo()==1"></div>		
+		<div data-bind="visible: STKInfo()==2" id="mainMenu">
+			<div>
+				<span id="menu_name" data-bind="text: menu_name_array_0">menu_name_array[0]</span>
+			</div>
+			<div>
+				<ul data-bind="foreach:main_menu_infos">
+					<li>
+						<input type="radio" class="radioStyle" name="main_menu_info" data-bind="value: $data.main_num_value, checked:$root.radio_select_submit_value"/>
+						<span style="cursor:pointer;" data-bind="text:main_menu_value , event:{dblclick: $root.select_main_menu}">'+menu_i+'</span>
+					</li>
+				</ul>
+			</div>
+			<div class="form-buttons">
+				<input class="btn-1" type="button" id="select_main" value="Select" trans="select" onClick = "select_main_menu_radio();">
+			</div>
+		</div>
+		<div data-bind="visible: STKInfo()==3" id="text">
+			<div>
+				<span id="menu_name_child" data-bind="text: stk_message_text">'+ stk_message_text +'</span></td>
+			</div>
+			<div class="form-buttons">
+				<input class="btn-1" type="button" id="text_ok" value="OK" trans="ok" onClick = "submit_text();">
+				<input class="btn-1" type="button" id="text_cancel" value="Cancel" trans="cancel" onClick = "back_submit_button();">
+			</div>
+		</div>
+		<div data-bind="visible: STKInfo()==4" id="childMenu">
+			<div>
+				<span id="menu_name" data-bind="text: menu_name_array_0">menu_name_array[0]</span>
+			</div>
+			<div>
+				<ul data-bind="foreach:main_menu_infos">
+					<li>
+						<input type="radio" name="child_menu_radio" data-bind="value: $data.main_num_value, checked:$root.child_menu_radio_value" />
+						<span style="cursor:pointer;" data-bind="text:main_menu_value , event:{dblclick: $root.select_menu_item}">'+menu_i+'</span>
+					</li>
+				</ul>			
+			</div>
+			<div class="form-buttons">
+				<input class="btn-1" type="button" id="select_item" value="Select" trans="select" onClick = "select_main_item_radio();" />
+				<input class="btn-1" type="button" id="back_item" value="Back" trans="back" onClick = "back_submit_button();" />
+				<input class="btn-1" type="button" id="exit_item" value="Exit" trans="exit" onClick = "exit_submit_button();" />
+			</div>
+		</div>
+		<div data-bind="visible: STKInfo()==5" id="messageBox">
+			<div>
+				<span data-bind="text: menu_name_array_0">stk_message_text</span>
+			</div>
+			<div class="form-buttons" style="margin-left:50">
+				<input class="btn-1" type="button" id="sms_ok" value="OK" trans="ok" onClick = "submit_text_ZSMSR();">
+			</div>
+		</div>
+		<div data-bind="visible: STKInfo()==6" id="inputBox">
+			<div>
+				<span data-bind="text: menu_name_array_0">stk_message_text</span>
+			</div>		
+			<div>
+				<span id="input_please" trans="input_please">Please input:</span>
+				<textarea id="input_content" cols="35" onKeyUp="input_updata();"></textarea>
+			</div>
+			<div>
+				<span id="max_number" trans="max_number">max number:&nbsp;&nbsp;</span>
+				<span id="input_max">&nbsp;</span>
+			</div>
+			<div>
+				<span id="min_number" trans="min_number">min number:&nbsp;&nbsp;</span>
+				<span id="input_min">&nbsp;</span>
+			</div>
+			<div class="form-buttons">
+				<input class="btn-1" type="submit" id="inputApply" value="Apply" trans="apply" onClick = "return input_apply();">
+				<input class="btn-1" type="button" id="input_back" value="Back" trans="back" onClick = "back_submit_button();" >
+			</div>
+		</div>
+	</div>
+ 
+</div>

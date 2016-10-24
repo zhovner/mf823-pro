@@ -1,0 +1,22 @@
+.customfile {
+    filter : "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa',endColorstr='#eaeaea')";
+}
+
+.btn-1 {
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#9d9d9d', endColorstr='#6c6c6c', GradientType=0);
+}
+
+.btn-1:hover {
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#4babf5', endColorstr='#2f76d0', GradientType=0)\9;
+}
+
+.btn-1:disabled.hover,
+.btn-1:disabled:hover {
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#d3d3d3', endColorstr='#b3b3b3', GradientType=0);
+}
+
+
+.btn-1.disabled,
+.btn-1[disabled] {
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#d3d3d3', endColorstr='#b3b3b3', GradientType=0);
+}

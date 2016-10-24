@@ -1,0 +1,212 @@
+<div class="form-body">
+    <form id="filterBasicForm">
+        <div class="form-title" trans="port_filter"></div>
+        <div class="content" style="padding-left: 20px;">
+            <div class="row-fluid">
+                <div class="span6">
+                    <div class="row-fluid"  style="line-height: 25px; margin-top: 5px;">
+                        <label class="" trans="port_filter_enabled" style="color: #8F8F8F;"></label>
+                        <div class="">
+                            <input type="radio" name="filterGrp" id="filterEnable" data-bind="checked: portFilterEnable" value="1"/>
+                            <label for="filterEnable" trans="enable"></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="filterGrp" id="filterDisable" data-bind="checked: portFilterEnable" value="0"/>
+                            <label for="filterDisable" trans="disable"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="span6">
+                    <div class="row-fluid" data-bind="visible: portFilterEnable() == '1' "  style="line-height: 25px; margin-top: 5px;">
+                        <label class="" trans="default_policy" style="color: #8F8F8F;"></label>
+                        <div class="">
+                            <input type="radio" name="defaultPolicyGrp" id="defaultPolicyAccept" data-bind="checked: defaultPolicy, event: {click: policyChangeHandler}" value="0"/>
+                            <label for="defaultPolicyAccept" trans="accepted"></label>
+                        </div>
+                        <div>
+                            <input type="radio" name="defaultPolicyGrp" id="defaultPolicyDrop" data-bind="checked: defaultPolicy, event: {click: policyChangeHandler}" value="1"/>
+                            <label for="defaultPolicyDrop" trans="dropped"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-buttons">
+            <input type="submit" class="btn-1 " trans="apply"/>
+        </div>
+        <div class="form-note">
+            <div class="notes-title">&nbsp;</div>
+            <ul class="notes-content">
+                <li trans="default_policy_note"></li>
+                <li trans="default_policy_note_filter"></li>
+            </ul>
+        </div>
+    </form>
+    <div data-bind="visible: oriPortFilterEnable() == '1' && portFilterEnable() == '1' ">
+        <form id="portFilterForm">
+            <div class="form-title" trans="port_filter_setting"></div>
+            <div class="content2" style="padding-left: 20px;">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="row-fluid" data-bind="visible: ipv6Support"  style="line-height: 25px; margin-top: 5px;">
+                            <label class="" trans="filter_ip_setting" style="color: #8F8F8F;"></label>
+                            <div class="">
+                                <input type="radio" name="ipTypeGrp" id="filterIpv4" data-bind="checked: ipType, event: {click: ipTypeChangeHandler}" value="ipv4"/>
+                                <label for="filterIpv4" trans="filter_ipv4"></label>
+                            </div>
+                            <div>
+                                <input type="radio" name="ipTypeGrp" id="filterIpv6" data-bind="checked: ipType, event: {click: ipTypeChangeHandler}" value="ipv6"/>
+                                <label for="filterIpv6" trans="filter_ipv6"></label>
+                            </div>
+                        </div>
+                        <div data-bind="visible: ipType() =='ipv4'">
+                            <div class="row-fluid"  style="line-height: 25px; margin-top: 10px;">
+                                <label class="" for="txtSourceIpAddress" trans="source_ip_address" style="color: #8F8F8F;"></label>
+                                <div class="">
+                                    <input type="text" name="txtSourceIpAddress" id="txtSourceIpAddress" data-bind="value: sourceIpAddress"  maxlength="15"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-bind="visible: ipType() =='ipv6'">
+                            <div class="row-fluid"  style="line-height: 25px; margin-top: 5px;">
+                                <label class="" for="txtSourceIpv6Address" trans="source_ipv6_address" style="color: #8F8F8F;"></label>
+                                <div class="">
+                                    <input type="text" name="txtSourceIpv6Address" id="txtSourceIpv6Address" data-bind="value: sourceIpv6Address"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid"  style="line-height: 25px; margin-top: 5px;">
+                            <label class="" for="protocol" trans="protocol" style="color: #8F8F8F;"></label>
+                            <div class="">
+                                <select id="protocol" transid="protocol" data-bind="options: modes, value: selectedMode, optionsText: transOption('protocol'), optionsValue: 'value', event:{ change: protocolChangeHandler}"></select>
+                            </div>
+                        </div>
+                        <div class="content" id="portRangeArea" data-bind="visible: selectedMode() != 'ICMP' && selectedMode() != 'None' " style="padding: 0px;">
+                            <div class="row-fluid"  style="line-height: 25px; margin-top: 5px;">
+                                <label class="" for="txtSourcePortStart" trans='source_port_range' style="color: #8F8F8F;"></label>
+                                <div class="">
+                                    <input style="width: 60px;" id='txtSourcePortStart' name="txtSourcePortStart" type="text" data-bind="value: sourcePortStart"
+                                           class="required rangeInput" maxlength="5"/>
+                                    -
+                                    <input style="width: 60px;" id='txtSourcePortEnd' name="txtSourcePortEnd" type="text" data-bind="value: sourcePortEnd"
+                                           class="required rangeInput" maxlength="5"/>
+                                    <label id='sourceRangeLabel'>(1~65535)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid"  style="line-height: 25px; margin-top: 5px;">
+                            <label class="" trans="port_filter_action" style="color: #8F8F8F;"></label>
+                            <div class="">
+                                <input type="radio" name="portFilterActionGrp" id="portFilterAccept" data-bind="checked: portFilterAction" value="Accept"/>
+                                <label for="portFilterAccept" trans="filter_accept"></label>
+                            </div>
+                            <div>
+                                <input type="radio" name="portFilterActionGrp" id="portFilterDrop" data-bind="checked: portFilterAction" value="Drop"/>
+                                <label for="portFilterDrop" trans="filter_drop"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="row-fluid"  style="line-height: 25px; margin-top: 5px;">
+                            <label class="" for="txtMacAddress" trans="mac_address" style="color: #8F8F8F;"></label>
+                            <div class="">
+                                <input type="text" name="txtMacAddress" id="txtMacAddress" data-bind="value: macAddress"  maxlength="17"/>
+                                <span style="display: block;font-size: 12px;" trans="macExam" id="macExamLabel"></span>
+                            </div>
+                        </div>
+                        <div data-bind="visible: ipType() =='ipv4'">
+                            <div class="row-fluid"  style="line-height: 25px; margin-top: 5px;">
+                                <label class="" for="txtDestIpAddress" trans="dest_ip_address" style="color: #8F8F8F;"></label>
+                                <div class="">
+                                    <input type="text" name="txtDestIpAddress" id="txtDestIpAddress" data-bind="value: destIpAddress"  maxlength="15"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-bind="visible: ipType() =='ipv6'">
+                            <div class="row-fluid"  style="line-height: 25px; margin-top: 5px;">
+                                <label class="" for="txtDestIpv6Address" trans="dest_ipv6_address" style="color: #8F8F8F;"></label>
+                                <div class="">
+                                    <input type="text" name="txtDestIpv6Address" id="txtDestIpv6Address" data-bind="value: destIpv6Address"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid"  style="line-height: 25px; margin-top: 5px;">
+                            <div class="" style="color: #8F8F8F;">&nbsp;</div>
+                            <div class="">&nbsp;</div>
+                        </div>
+                        <div class="content" id="portRangeArea" data-bind="visible: selectedMode() != 'ICMP' && selectedMode() != 'None' " style="padding: 0px;">
+                            <div class="row-fluid"  style="line-height: 25px; margin-top: 5px;">
+                                <label class="" for="txtDestPortStart" trans='dest_port_range' style="color: #8F8F8F;"></label>
+                                <div class="">
+                                    <input style="width: 60px;" id='txtDestPortStart' name="txtDestPortStart" type="text" data-bind="value: destPortStart"  class="required rangeInput" maxlength="5"/>
+                                    -
+                                    <input style="width: 60px;" id='txtDestPortEnd' name="txtDestPortEnd" type="text" data-bind="value: destPortEnd"
+                                           class="required rangeInput" maxlength="5"/>
+                                    <label id='destRangeLabel'>(1~65535)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content" style="padding:0px ">
+                            <div class="row-fluid"  style="line-height: 25px; margin-top: 5px;">
+                                <label class="" for="txtComment" trans="comment" style="color: #8F8F8F;"></label>
+                                <div class="">
+                                    <input type="text" name="txtComment" id="txtComment" data-bind="value: comment" class="required" maxlength="31"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-buttons">
+                <input type="submit" class="btn-1 " trans="apply"/>
+            </div>
+            <div class="form-note">
+                <div class="notes-title">&nbsp;</div>
+                <ul class="notes-content">
+                    <li trans="port_filter_note_mac_address"></li>
+                    <li trans="port_filter_note_source_ip_address"></li>
+                    <li trans="port_filter_note_dest_ip_address"></li>
+                    <li trans="port_filter_note_protocol"></li>
+                    <li trans="port_filter_note_source_port_range"></li>
+                    <li trans="port_filter_note_dest_port_range"></li>
+                    <li trans="port_filter_note_action"></li>
+                    <li trans="port_filter_note_comment"></li>
+                    <li trans="port_filter_note_info"></li>
+                    <li trans="rule_max_note_v4v6" data-bind="visible: ipv6Support"></li>
+                    <li trans="rule_max_note" data-bind="visible: !ipv6Support()"></li>
+                </ul>
+            </div>
+        </form>
+        <form id="portFilterListForm">
+            <div class="form-title" trans="port_filter_list"></div>
+            <div class="content" style="padding-left: 20px;">
+                <div>
+                    <div id="portFilters" class="fixTableScroll" data-bind="simpleGrid: gridTemplate"></div>
+                </div>
+            </div>
+
+            <div class="form-buttons">
+                <input type="submit" class="btn-1 " trans="delete" data-bind="enable: gridTemplate.checkedCount() > 0"/>
+            </div>
+
+            <!-- ko if: oriDefaultPolicy() == '0' -->
+            <div class="form-note">
+                <div class="notes-title">&nbsp;</div>
+                <ul class="notes-content">
+                    <li trans="filter_accept_note"></li>
+                </ul>
+            </div>
+            <!-- /ko -->
+            <!-- ko if: oriDefaultPolicy() == '1' -->
+            <div class="form-note">
+                <div class="notes-title">&nbsp;</div>
+                <ul class="notes-content">
+                    <li trans="filter_drop_note"></li>
+                </ul>
+            </div>
+            <!-- /ko -->
+        </form>
+    </div>
+</div>

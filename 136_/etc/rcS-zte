@@ -1,0 +1,83 @@
+#!/bin/sh
+mkdir -p /usr/zte_web/web/zte_log
+#date -s "2012-04-01 00:00:00"
+#zte_fota
+if [ -d /cache/zte_fota/delta ]; then
+    if [ -f /cache/zte_fota/delta/disk ]; then
+        mkdir -p /cache/zte_fota/delta/mnt
+        mount -t vfat /cache/zte_fota/delta/disk /cache/zte_fota/delta/mnt
+	sleep 5
+	touch /cache/zte_fota/delta/mnt/ready
+    fi
+fi
+zte_fota_reco update_system
+
+#################### Factory Restore Function Begin ######################
+factory_restore()
+{
+	echo "start restore configs." >> /tmp/restore.log
+	#restore nvconfig
+	rm /usr/zte/zte_conf/config/userseting_nvconfig.txt || echo "can not remove userseting_nvconfig.txt" >> /tmp/restore.log
+	#restore dnsmasq
+	rm /usr/zte/zte_conf/config/dnsmasq.conf || echo "can not remove /usr/zte/zte_conf/config/dnsmasq.conf" >> /tmp/restore.log
+	cp /usr/zte_web/web/copy/etc/dnsmasq.conf /usr/zte/zte_conf/config/dnsmasq.conf || echo "can not copy /usr/zte_web/web/copy/etc/dnsmasq.conf" >> /tmp/restore.log
+	#restore xxx
+	rm /etc/factory_restore || echo "fatal error: can not remove flag /etc/factory_restore" >> /tmp/restore.log
+	echo "restore configs finished." >> /tmp/restore.log
+}
+
+factory_restore_probe()
+{
+	if [ -f /etc/factory_restore ]; then
+		echo "need restore configs..." >> /tmp/restore.log
+		factory_restore
+	else
+	    echo "no need restore configs." >> /tmp/restore.log
+	fi
+}
+
+userdata_restore_probe()
+{
+	#check if restore ztedata
+	if [ -f /etc/userdata_restore_flag ]; then
+		rm /etc/userdata_restore_flag || echo "fatal error: can not remove /etc/userdata_restore_flag" >> /tmp/restore.log
+		echo "need restore userdata..." >> /tmp/restore.log
+		######## restore sms and phonebook here ########
+		rm /usr/zte/web/sms_db/sms.db || echo "can not remove /usr/zte/web/sms_db/sms.db" >> /tmp/restore.log
+		rm /usr/zte/web/pbm_db/pbm.db || echo "can not remove /usr/zte/web/pbm_db/pbm.db" >> /tmp/restore.log
+		######## restore userdata here ########
+		echo "restore userdata finished." >> /tmp/restore.log
+	else
+		echo "no need restore userdata." >> /tmp/restore.log
+	fi
+}
+### this must be the first to run ###
+#echo "checking for restore..." > /tmp/restore.log
+#echo "start time: `date`" >> /tmp/restore.log
+#userdata_restore_probe
+#factory_restore_probe
+#echo "end time  : `date`" >> /tmp/restore.log
+
+#################### Factory Restore Function End ######################
+set_passwd()
+{
+	echo "root:zte9x15" > /tmp/tmppw
+	chpasswd < /tmp/tmppw
+	rm -rf /tmp/tmppw
+}
+set_passwd
+#start up telnetd for debug use
+telnetd
+
+#################### Add zte programs below ####################
+ifconfig lo up
+#zte_usb_ctl &
+
+#cfg will start zte_topsw_daemon
+#zte_topsw_cfg &
+#atfwd_daemon &
+#zte_fota_vd &
+
+#zte_fota_reco
+
+

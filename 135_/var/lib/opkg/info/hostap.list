@@ -1,0 +1,7 @@
+/usr/sbin/wpa_passphrase
+/usr/bin/hostapd_cli
+/usr/bin/hostapd
+/usr/sbin/wpa_supplicant
+/etc/hostapd.conf
+/usr/bin/hostapd_wps
+/usr/sbin/wpa_cli

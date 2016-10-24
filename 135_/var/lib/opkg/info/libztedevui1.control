@@ -1,0 +1,13 @@
+Package: libztedevui1
+Version: git-r0
+Description: ztedevui version git-r0
+ Qualcomm Data DSutils Module
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: ztedevui
+Homepage: http://support.cdmatech.com
+Depends: libztesocket1 (>= git), libztelog1 (>= git), diag (>= git), libztemmi1 (>= git), libc6 (>= 2.13), libglib-2.0-0 (>= 2.30.2)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_libs/libzte_devui

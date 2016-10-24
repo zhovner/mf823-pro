@@ -1,0 +1,13 @@
+Package: usbutils-ids
+Version: 0.91-r3
+Description: Host side USB console utilities.
+ Contains the lsusb utility for inspecting the devices connected to the
+ USB bus.
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: GPLv2+
+Architecture: armv7a-vfp-neon
+OE: usbutils
+Homepage: http://www.linux-usb.org
+Source: http://kernel.org/pub/linux/utils/usb/usbutils/usbutils-0.91.tar.gz

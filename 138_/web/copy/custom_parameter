@@ -1,0 +1,28 @@
+Default
+dial_mode=manual_dial
+APN_config0=Default($)($)manual($)*99#($)none($)($)($)IP($)auto($)($)auto($)($)
+APN_config1=Default($)($)manual($)*99#($)none($)($)($)IP($)auto($)($)auto($)($)
+APN_config2=Beeline($)home.beeline.ru($)manual($)*99#($)pap($)beeline($)beeline($)IP($)auto($)($)auto($)($)
+APN_config3=Beeline 2($)internet.beeline.ru($)manual($)*99#($)pap($)beeline($)beeline($)IP($)auto($)($)auto($)($)
+APN_config4=MegaFon($)internet($)manual($)*99#($)none($)($)($)IP($)auto($)($)auto($)($)
+APN_config5=MTS($)internet.mts.ru($)manual($)*99#($)none($)($)($)IP($)auto($)($)auto($)($)
+APN_config6=Rostelecom($)internet.rt.ru($)manual($)*99#($)none($)($)($)IP($)auto($)($)auto($)($)
+APN_config7=Tele2($)internet.tele2.ru($)manual($)*99#($)none($)($)($)IP($)auto($)($)auto($)($)
+APN_config8=Letai($)internet.letai.ru($)manual($)*99#($)none($)($)($)IP($)auto($)($)auto($)($)
+APN_config9=Yota($)yota.ru($)manual($)*99#($)none($)($)($)IP($)auto($)($)auto($)($)
+m_profile_name=Default
+wan_apn=
+ppp_auth_mode=none
+ppp_username=
+ppp_passwd=
+apn_mode=auto
+Language=ru
+pageTitle=ZTE MF823
+ipv6_APN_config0=Beeline Home($)($)($)($)($)($)($)($)($)($)($)($)
+ipv6_APN_config1=Beeline Internet($)($)($)($)($)($)($)($)($)($)($)($)
+unlock_nck_time=100
+sim_imsi_lists=
+sim_imsi_lists_index=0
+#####This item must be in the end#####
+nvc_reserved=1
+#####The End#####

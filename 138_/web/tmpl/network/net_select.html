@@ -1,0 +1,172 @@
+<form>
+<div class="form-body">
+    <div class="form-title" trans='net_select'></div>
+    <div class="content"  style="padding-left: 20px;">
+        <div class="row-fluid" style="line-height: 25px;">
+            <label class="" trans='net_select2' style="color: #8F8F8F; line-height: 25px;"></label>
+            <div class="">
+                <input type="radio" name="selectGroup" id='auto_select' value="auto_select" data-bind="checked: selectMode" />
+                <label for='auto_select' trans='auto_select'></label>
+                <select transid='auto_select_type' id="type" data-bind="options: types, value: selectedType, optionsText: transOption('auto_select_type'), optionsValue: 'value', enable: selectMode() == 'auto_select'"></select>
+            </div>
+        </div>
+        <div class="row-fluid" style="line-height: 25px;">
+            <div class="">
+                <input type="radio" name="selectGroup" id='manual_select'  value="manual_select" data-bind="checked: selectMode" />
+                <label for='manual_select' trans='manual_select'></label>
+            </div>
+        </div>
+        <div class="row-fluid" style="line-height: 25px; margin-top: 6px">
+            <label class="" trans='band_sel' style="color: #8F8F8F; line-height: 25px;"></label>
+        </div>
+        <div class="row-fluid" style="line-height: 25px;">
+            <div class="" style="width: 170px; float: left">
+                <div class="row-fluid" style="margin-top: 4px">
+                	<p id="plset" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': islbset()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && islbset()=='on'}, click: setlball" manualControl="true">
+				<input type="checkbox" id="islbset" value="on" data-bind="checked:islbset()=='on'"/>
+			</p>
+			<label for="islbset" trans="tr_all_lte" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+		<div class="row-fluid" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': islb1set()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && islb1set()=='on'}, click: setlb1" manualControl="true">
+				<input type="checkbox" id="islb1set" value="on" data-bind="checked:islb1set()=='on'"/>
+			</p>
+			<label for="islb1set" trans="LTE B1 (2100)" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+		<div class="row-fluid" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': islb3set()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && islb3set()=='on'}, click: setlb3" manualControl="true">
+				<input type="checkbox" id="islb3set" value="on" data-bind="checked:islb3set()=='on'"/>
+			</p>
+			<label for="islb3set" trans="LTE B3 (1800)" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+		<div class="row-fluid" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': islb7set()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && islb7set()=='on'}, click: setlb7" manualControl="true">
+				<input type="checkbox" id="islb7set" value="on" data-bind="checked:islb7set()=='on'"/>
+			</p>
+			<label for="islb7set" trans="LTE B7 (2600)" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+		<div class="row-fluid" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': islb8set()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && islb8set()=='on'}, click: setlb8" manualControl="true">
+				<input type="checkbox" id="islb8set" value="on" data-bind="checked:islb8set()=='on'"/>
+			</p>
+			<label for="islb8set" trans="LTE B8 (900)" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+		<div class="row-fluid" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': islb20set()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && islb20set()=='on'}, click: setlb20" manualControl="true">
+				<input type="checkbox" id="islb20set" value="on" data-bind="checked:islb20set()=='on'"/>
+			</p>
+			<label for="islb20set" trans="LTE B20 (800)" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+		<div class="row-fluid" data-bind="visible: tdd" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': islb38set()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && islb38set()=='on'}, click: setlb38" manualControl="true">
+				<input type="checkbox" id="islb38set" value="on" data-bind="checked:islb38set()=='on'"/>
+			</p>
+			<label for="islb38set" trans="LTE B38 (TDD 2600)" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+		<div class="row-fluid" data-bind="visible: tdd" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': islb40set()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && islb40set()=='on'}, click: setlb40" manualControl="true">
+				<input type="checkbox" id="islb40set" value="on" data-bind="checked:islb40set()=='on'"/>
+			</p>
+			<label for="islb40set" trans="LTE B40 (TDD 2300)" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+            </div>
+            <div class="" style="width: 170px; float: left">
+		<div class="row-fluid" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': isubset()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && isubset()=='on'}, click: setuball" manualControl="true">
+				<input type="checkbox" id="setubandall" value="on" data-bind="checked:isubset()=='on'"/>
+			</p>
+			<label for="setubandall" trans="tr_all_umts" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+		<div class="row-fluid" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': isub1set()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && isub1set()=='on'}, click: setub1" manualControl="true">
+				<input type="checkbox" id="setuband1" value="on" data-bind="checked:isub1set()=='on'"/>
+			</p>
+			<label for="setuband1" trans="UMTS B1 (2100)" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+		<div class="row-fluid" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': isub8set()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && isub8set()=='on'}, click: setub8" manualControl="true">
+				<input type="checkbox" id="setuband8" value="on" data-bind="checked:isub8set()=='on'"/>
+			</p>
+			<label for="setuband8" trans="UMTS B8 (900)" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+            </div>
+            <div class="" style="width: 170px; float: left">
+		<div class="row-fluid" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': isgbset()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && isgbset()=='on'}, click: setgball" manualControl="true">
+				<input type="checkbox" id="setgbandall" value="on" data-bind="checked:isgbset()=='on'"/>
+			</p>
+			<label for="setgbandall" trans="tr_all_gsm" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+		<div class="row-fluid" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': isgb850set()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && isgb850set()=='on'}, click: setgb850" manualControl="true">
+				<input type="checkbox" id="setgband850" value="on" data-bind="checked:isgb850set()=='on'"/>
+			</p>
+			<label for="setgband850" trans="GSM 850" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+		<div class="row-fluid" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': isgb900set()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && isgb900set()=='on'}, click: setgb900" manualControl="true">
+				<input type="checkbox" id="setgband900" value="on" data-bind="checked:isgb900set()=='on'"/>
+			</p>
+			<label for="setgband900" trans="GSM 900" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+		<div class="row-fluid" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': isgb1800set()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && isgb1800set()=='on'}, click: setgb1800" manualControl="true">
+				<input type="checkbox" id="setgband1800" value="on" data-bind="checked:isgb1800set()=='on'"/>
+			</p>
+			<label for="setgband1800" trans="GSM 1800" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+		<div class="row-fluid" style="margin-top: 4px">
+			<p id="" class="checkbox floatleft checkboxToggle" data-bind="css:{'checkbox_selected': isgb1900set()=='on', disable: chkboxesDisable(), checked_disable: chkboxesDisable() && isgb1900set()=='on'}, click: setgb1900" manualControl="true">
+				<input type="checkbox" id="setgband1900" value="on" data-bind="checked:isgb1900set()=='on'"/>
+			</p>
+			<label for="setgband1900" trans="GSM 1900" class="update_inline floatleft" style="line-height: 19px; font-size: 14px"></label>
+		</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-buttons">
+        <input type="button" class="btn-1 " data-bind='click: save, visible: selectMode() == "auto_select"'  trans='apply'/>
+        <input type="button" class="btn-1 " data-bind='click: search, visible: selectMode() != "auto_select"' trans='search'/>
+    </div>
+    <div class="content" data-bind='visible: networkList().length > 0 && selectMode() == "manual_select"'>
+        <div class="form-title" trans='network_list'></div>
+        <div class="content" style="padding-left: 20px;">
+            <div class="ko-grid-container marginnone">
+                <table class="ko-grid colorHoverTable marginnone" cellspacing="0" cellpadding="0">
+                    <thead>
+                    <tr>
+                        <th width="15%" trans="option"></th>
+                        <th width="20%" trans="net_status"></th>
+                        <th width="25%" trans="network_provider2"></th>
+                        <th width="20%" trans="mccmnc"></th>
+                        <th width="20%" trans="networktype"></th>
+                    </tr>
+                    </thead>
+                    <tbody data-bind='foreach: networkList'>
+                    <tr data-bind="css:{odd:$index()%2==1, even:$index()%2==0}">
+                        <td><input type="radio" name="networkGroup"
+                                   data-bind='value: $root.networkValue($data), checked: $root.selectNetwork, attr: {id: $root.networkValue($data)}, enable: $root.radioEnable($data)'/>
+                        </td>
+                        <td data-bind='attr: {trans: $root.networkStatusId($data)}, text: $root.networkStatus($data)'></td>
+                        <td data-bind='text: $root.operatorName($data)'></td>
+                        <td data-bind='text: $root.networkText($data)'></td>
+                        <td data-bind='attr: {trans: $root.networkTypeId($data)}, text: $root.networkType($data)'></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+	<div class="form-buttons">
+	    <input type="button" class="btn-1 " data-bind='click: register, enable: selectNetwork() != "", css: {disabled: selectNetwork() == ""}' trans='register'/>
+	</div>
+    </div>
+    <div class="form-note">
+        <div class="notes-title">&nbsp;</div>
+        <ul class="notes-content">
+	    <li trans="diconneted_operate_note"></li>
+            <li trans="net_select_note_automatic"></li>
+            <li trans="net_select_note_manual"></li>
+        </ul>
+    </div>
+</div>
+</form>

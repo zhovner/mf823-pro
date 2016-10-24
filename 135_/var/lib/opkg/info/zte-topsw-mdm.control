@@ -1,0 +1,13 @@
+Package: zte-topsw-mdm
+Version: git-r0
+Description: zte-topsw-mdm version git-r0
+ Qualcomm Data DSutils Module
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: zte-topsw-mdm
+Homepage: http://support.cdmatech.com
+Depends: libztenvconfig1 (>= git), libztesocket1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), qmi (>= git), qmi-framework (>= git), libztemdm1 (>= git), libc6 (>= 2.13), libztemc1 (>= git), libztedevui1 (>= git)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_apps/zte_topsw_mdm

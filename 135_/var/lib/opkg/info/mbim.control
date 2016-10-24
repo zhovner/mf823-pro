@@ -1,0 +1,13 @@
+Package: mbim
+Version: git-r0
+Description: mbim version git-r0
+ USB Mobile Broadband Interface Model (MBIM) Command Processor
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: mbim
+Homepage: http://support.cdmatech.com
+Depends: libgcc1 (>= 4.6.2+svnr181430), libztesocket1 (>= git), libztelog1 (>= git), libztecfg1 (>= git), qmi (>= git), qmi-framework (>= git), libc6 (>= 2.13), diag (>= git)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/mbim

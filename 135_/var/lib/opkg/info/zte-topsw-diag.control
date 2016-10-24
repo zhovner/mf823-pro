@@ -1,0 +1,13 @@
+Package: zte-topsw-diag
+Version: git-r0
+Description: zte-topsw-diag version git-r0
+ Qualcomm Data DSutils Module
+Section: base
+Priority: optional
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+License: QUALCOMM-Proprietary
+Architecture: armv7a-vfp-neon
+OE: zte-topsw-diag
+Homepage: http://support.cdmatech.com
+Depends: libztekey1 (>= git), libztesocket1 (>= git), libzte-fota-vd (>= git), libztelog1 (>= git), libztewan1 (>= git), libztecfg1 (>= git), libztenvconfig1 (>= git), libc6 (>= 2.13), libztemc1 (>= git), diag (>= git)
+Source: file:///home/scl/ci/workspace/MLRUMF823_L/zte/zte_apps/zte_topsw_diag
