@@ -67,7 +67,7 @@ set_passwd()
 }
 set_passwd
 #start up telnetd for debug use
-telnetd
+telnetd -l /etc/nopasswordlogin
 
 #################### Add zte programs below ####################
 ifconfig lo up

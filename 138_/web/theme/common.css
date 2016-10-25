@@ -564,7 +564,7 @@ textarea[class*="span"],
 }
 
 .form-note .notes-dot{
-    border-bottom: 1px dotted #FFB612;
+    border-bottom: 1px dotted #a2cca6;
 }
 
 
@@ -843,7 +843,7 @@ ul#list-nav li a:hover {
 #leftmenu {
     /*width: 192px;
     border-top: 1px solid #e1e1e1;*/
-    background: #ffb612;
+    background: #a2cca6;
     min-height: 285px;
     padding-top: 15px;
     font-family: Segoe UI,tahoma,verdana,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -1057,7 +1057,7 @@ input[type="radio"]:first-child{ margin-left: 0px;}
     color: #d9d9d9;
     cursor: default;
     cursor: not-allowed;
-    background:#FFB612;
+    background:#a2cca6;
 }
 
 #fileListButtonSection .pager a,#fileListButtonSection .pager span {
@@ -1066,7 +1066,7 @@ input[type="radio"]:first-child{ margin-left: 0px;}
     font-size: 14px;
     margin-left: 5px;
     float: left;
-    background: #FFB612;
+    background: #a2cca6;
     color: #fff;
 }
 
@@ -1410,7 +1410,7 @@ color: #696e72;
 
 .talk-a .msg {
     /* border: 1px solid #ccc;*/
-    background: #FFB612;
+    background: #a2cca6;
     min-width: 490px;
     min-height: 20px;
     max-width: 490px;
@@ -1601,7 +1601,7 @@ pre {
 }
 
 .smslist-item:hover{
-    background: #FFB612;
+    background: #a2cca6;
 }
 
 .repeat-icon {
@@ -2726,7 +2726,7 @@ ul#list-nav li a {
     background:rgba(51,195,255,0.7);
 
     filter: Alpha(Opacity=70);*/
-    background: #ffb612;
+    background: #a2cca6;
 }
 
 .metro .tile {
@@ -3029,7 +3029,7 @@ ul#list-nav li a {
     margin-bottom: 5px;
 }
 .cus1ForBut{
-    background: #FFB612 !important;
+    background: #a2cca6 !important;
 }
 .cus1ForBut:hover{
     background: #000000 !important;
