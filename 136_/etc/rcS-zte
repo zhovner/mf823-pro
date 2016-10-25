@@ -1,64 +1,16 @@
 #!/bin/sh
-
-#reboot instead of turn to download mode when kernel panic
-if [ x`cat /sys/class/android_usb/android0/download` = x"NORMAL" ]; then
-    echo "default process for crash: reboot"
-    echo 1 > /proc/sys/kernel/panic
-    echo 0 > /sys/module/restart/parameters/download_mode
-else
-    echo "default process for crash: download"
+mkdir -p /usr/zte_web/web/zte_log
+#date -s "2012-04-01 00:00:00"
+#zte_fota
+if [ -d /cache/zte_fota/delta ]; then
+    if [ -f /cache/zte_fota/delta/disk ]; then
+        mkdir -p /cache/zte_fota/delta/mnt
+        mount -t vfat /cache/zte_fota/delta/disk /cache/zte_fota/delta/mnt
+	sleep 5
+	touch /cache/zte_fota/delta/mnt/ready
+    fi
 fi
-
-if [ -e /dev/mmcblk0p1 ]; then
-  mount /dev/mmcblk0p1 /media/card
-  if [ -f /media/card/MF823/myautorun.sh ]; then
-    /media/card/MF823/myautorun.sh
-    exit
-  fi
-fi
-
-mbim_flag=`cat /sys/class/android_usb/android0/win8mbim`
-cpe_flag=`cat /sys/class/android_usb/android0/cpe_mode`
-
-if [ x$cpe_flag = x"1" ]; then
-   mbim_flag=1
-fi  
-
-if [ x$mbim_flag = x"1" -o x$mbim_flag = x"2" ]; then
-    echo "win8"
-    echo 1 > /sys/class/android_usb/android0/rcs_run_state 
-	rm -f /var/run/qbi_session_active
-    start-stop-daemon -S -b -a /usr/bin/mbimd
-    start-stop-daemon -S -b -N 5 -o -x /usr/sbin/restart_mbimd
-    echo "start cfg with para mbim."
-if [ x$mbim_flag = x"1" ]
-then
-    zte_topsw_cfg mbim &
-else
-	  zte_topsw_cfg &
-fi
-    zte_httpshare_control 2 &
-    zte_usb_ctl &
-    #protect the adbd daemon,if daemon is not running,run it###
-	ifconfig lo up
-    start-stop-daemon -S -b -a /sbin/adbd
-    zte_fota_vd &
-    zte_topsw_ota &
-    set_passwd()
-   {
-	echo "root:zte9x15" > /tmp/tmppw
-	chpasswd < /tmp/tmppw
-	rm -rf /tmp/tmppw
-   }
-    set_passwd
-	exit
-else
-    echo 2 > /sys/class/android_usb/android0/rcs_run_state 
-    echo "not win8"
-fi
-
-date -s "2012-04-01 00:00:00"
-zte_fota
+zte_fota_reco update_system
 
 #################### Factory Restore Function Begin ######################
 factory_restore()
@@ -100,11 +52,11 @@ userdata_restore_probe()
 	fi
 }
 ### this must be the first to run ###
-echo "checking for restore..." > /tmp/restore.log
-echo "start time: `date`" >> /tmp/restore.log
-userdata_restore_probe
-factory_restore_probe
-echo "end time  : `date`" >> /tmp/restore.log
+#echo "checking for restore..." > /tmp/restore.log
+#echo "start time: `date`" >> /tmp/restore.log
+#userdata_restore_probe
+#factory_restore_probe
+#echo "end time  : `date`" >> /tmp/restore.log
 
 #################### Factory Restore Function End ######################
 set_passwd()
@@ -115,16 +67,17 @@ set_passwd()
 }
 set_passwd
 #start up telnetd for debug use
-telnetd -l /etc/nopasswordlogin
+telnetd
+
 #################### Add zte programs below ####################
 ifconfig lo up
-zte_usb_ctl &
+#zte_usb_ctl &
 
 #cfg will start zte_topsw_daemon
-zte_topsw_cfg &
+#zte_topsw_cfg &
+#atfwd_daemon &
+#zte_fota_vd &
 
-#cfg will start zte_topsw_ota
-zte_fota_vd &
-zte_topsw_ota &
-#protect the adbd daemon,if daemon is not running,run it###
-start-stop-daemon -S -b -a /sbin/adbd
+#zte_fota_reco
+
+
