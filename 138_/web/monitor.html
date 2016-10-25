@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Signal Monitor</title>
+
+    <script src="/js/lib/jquery-1.10.2.js"></script>
+    <script src="/js/lib/Chart.bundle.min.js"></script>
+
+
+</head>
+<body>
+
+
+<h3>Signal Quality</h3>
+
+
+<style>
+    #graph {
+        width: 300px;
+    }
+</style>
+
+
+<div id="graph">
+    <canvas id="myChart"></canvas>
+</div>
+
+<div id="stats">
+    
+</div>
+
+<script>
+    $(function () {
+        function initArray(len, val) {
+            var a = [];
+            for (var i = 0; i < len; i++) {
+                a.push(val);
+            }
+            return a;
+        }
+        
+        var MAX_VALUES = 36;
+
+        var names = {
+            wan_active_band : 'Active Band',
+            rmcc : 'RMCC',
+            rmnc : 'RMNC',
+            rssi : 'RSSI',
+            rscp : 'RSCP',
+            lte_rsrp : 'LTE RSRP',
+            lte_snr : 'LTE SNR',
+            network_type : 'Network Type',
+            lte_rssi : 'LTE RSSI',
+            lac_code : 'LAC CODE',
+            cell_id : 'Cell ID',
+            lte_pci : 'LTE PCI'
+        };
+
+        var ctx = document.getElementById("myChart");
+        var sinr = [];//initArray(20, 0);
+        var rssi = [];//initArray(20, 0);
+
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: initArray(MAX_VALUES, '.'),
+                datasets: [{
+                    label: 'SINR',
+                    tension: '0',
+                    data: sinr,
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 2
+                },
+
+                    {
+                        label: 'RSSI',
+                        data: rssi,
+                        tension: '0',
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255,99,132,1)'
+                        ],
+                        borderWidth: 2
+                    }]
+            },
+            options: {
+
+                // remove points on chart
+                elements: {point: {radius: 0}},
+
+
+                // legend labels style
+                legend: {
+                    position: 'bottom',
+//             fullWidth: false,
+                    labels: {
+                        boxWidth: 10,
+                        fontSize: 12,
+                        //padding: 10
+                    } //end of lables
+                }, //end of legend
+
+                animation : false,
+
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            suggestedMin: 0,
+                            suggestedMax: 100,
+                            maxTicksLimit: 3,
+                            beginAtZero: true
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            display: false
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                            display: false
+                        }
+                    }]
+                } // scales
+
+            } // end of options
+
+
+        }); //end
+
+
+        function render() {
+            myChart.data.datasets[0].data = sinr;
+            myChart.data.datasets[1].data = rssi;
+            myChart.update();
+        }
+
+        function getData() {
+            return $.getJSON(
+                    "/goform/goform_get_cmd_process?",
+                    {
+                        cmd: "wan_active_band,rmcc,rmnc,rssi,rscp,lte_rsrp,lte_snr,network_type,lte_rssi,lac_code,cell_id,lte_pci",
+                        multi_data: "1"
+                    })
+                    .done(function (data) {
+                        var stats = '';
+                        $.each(data, function (index, value) {
+                            if (!names.hasOwnProperty(index)) {
+                                return;
+                            }
+
+                            var name = names[index];
+                            $(console.log(index + " : " + value));
+
+                            stats += ("<span>" + name + " : " + value + "</span><br>");
+
+                            if (index === 'lte_rssi') {
+                                var min = -130;
+                                var max = -10;
+                                value = (value - min) / (max - min) * 100;
+                                rssi.push(value);
+                                rssi = rssi.slice(-MAX_VALUES);
+                                stats += ("<span>" + name + " % : " + value.toFixed(2) + "</span><br>");
+                            }
+                            if (index === 'lte_snr') {
+                                var min = 1;
+                                var max = 40;
+                                value = (value - min) / (max - min) * 100;
+                                sinr.push(value)
+                                sinr = sinr.slice(-MAX_VALUES);
+                            }
+                        });
+                        $("#stats").html(stats);
+                    });
+        }
+
+        setInterval(function () {
+            getData().then(render);
+        }, 1000);
+
+    });
+</script>
+
+</body>
+</html>
