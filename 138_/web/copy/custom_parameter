@@ -23,6 +23,15 @@ ipv6_APN_config1=Beeline Internet($)($)($)($)($)($)($)($)($)($)($)($)
 unlock_nck_time=100
 sim_imsi_lists=
 sim_imsi_lists_index=0
+lan_ipaddr=172.18.23.1
+lan_netmask=255.255.255.0
+dhcpEnabled=1
+dhcpStart=172.18.23.100
+dhcpEnd=172.18.23.200
+dhcpLease_hour=24
+dhcpLease=86400
+LocalDomain=zte.modem
+lan_ipaddr_for_current=172.18.23.1
 #####This item must be in the end#####
 nvc_reserved=1
 #####The End#####
